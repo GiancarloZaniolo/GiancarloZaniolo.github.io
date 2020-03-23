@@ -1,5 +1,5 @@
 body{
-  background-color: LightGoldenRodYellow;
+  background-color: #deffdf;
   font-family: "arial";
 }
 
@@ -44,12 +44,22 @@ body{
   font-weight: 400;
   color: #4f4f4f;
   text-decoration: underline;
-  margin: 5px 10px 10px 70px;
+  margin: 5px 0px 10px 0px;
+  display: block;
+}
 
+.future-project-name{
+  font-size: 15px;
+  font-weight: 400;
+  color: #4f4f4f;
+  margin: 5px 0px 10px 0px;
+  display: block;
 }
 
 .project-img{
   /* round off corners of project images */
  border-radius: 25px; 
+ height: 150px;
+ width:150px;
 }
 
