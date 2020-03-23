@@ -3,6 +3,20 @@ body{
   font-family: "arial";
 }
 
+main{
+  display: grid;
+  grid-template-columns: 250px 250px;
+  grid-template-rows: 250px;
+  grid-row-gap: 0px;
+  grid-column-gap: 0px;
+  grid-auto-rows: 250px;
+  justify-items: center;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+  grid-auto-flow: row;
+}
+
 .header h1{
   font-size: 40px;
   font-weight: 700;
@@ -31,6 +45,10 @@ body{
   border-top: 2px solid #2b2b2b;
   padding: 0px 300px 0px 0px; 
   margin: 20px 0px 60px 10px
+}
+
+.projects{
+  width: 150px;
 }
 
 .projects-title{
