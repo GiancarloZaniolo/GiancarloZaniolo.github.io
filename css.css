@@ -41,6 +41,14 @@ main{
   margin: 0px 70px 30px 70px;
 }
 
+.aboutMe .inline-link{
+  font-size: 18px;
+  font-weight: 400;
+  color: #4f4f4f;
+  text-decoration: underline;
+  margin: 0px 0px 0px 0px;
+}
+
 .line{
   border-top: 2px solid #2b2b2b;
   padding: 0px 300px 0px 0px; 
