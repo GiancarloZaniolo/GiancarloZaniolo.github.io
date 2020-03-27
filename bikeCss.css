@@ -1,0 +1,53 @@
+body{
+  background-color: #ffe6cc;
+  font-family: "arial";
+}
+
+.line{
+  border-top: 2px solid #2b2b2b;
+  padding: 0px 300px 0px 0px; 
+  margin: 20px 0px 40px 10px
+}
+
+.project-header h1{
+  font-size: 40px;
+  font-weight: 700;
+  color: Black;
+  /*gives margins clockwise rotation*/
+  margin: 50px 30px 50px 30px;
+}
+
+.project-header h4{
+  font-size: 18px;
+  font-weight: 500;
+  color: Black;
+  /*gives margins clockwise rotation*/
+  margin: 50px 30px 20px 30px;
+}
+
+.bikeExperiments h4{
+  font-size: 18px;
+  font-weight: 700;
+  color: Black;
+  /*gives margins clockwise rotation*/
+  margin: 50px 30px 30px 30px;
+}
+
+.bikeExperiments a{
+  font-size: 16px;
+  font-weight: 400;
+  color: #4f4f4f;
+  text-decoration: underline;
+}
+
+.bikeExperiments .links{
+  /*gives margins clockwise rotation*/
+  margin: 20px 30px 20px 30px;
+}
+
+.bikeExperiments p{
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  margin: 20px 30px 30px 30px;
+}
