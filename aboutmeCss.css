@@ -1,0 +1,35 @@
+body{
+  background-color: #ffe6cc;
+  font-family: "arial";
+}
+
+h1{
+  font-size: 40px;
+  font-weight: 700;
+  color: Black;
+  /*gives margins clockwise rotation*/
+  margin: 50px 30px 50px 30px;
+}
+
+h2{
+  font-size: 24px;
+  font-weight: 600;
+  color: Black;
+  /*gives margins clockwise rotation*/
+  margin: 50px 30px 20px 30px;
+}
+
+a{
+  font-size: 16px;
+  font-weight: 400;
+  color: #4f4f4f;
+  text-decoration: underline;
+  margin: 20px 30px 20px 30px;
+}
+
+p{
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  margin: 20px 30px 30px 30px;
+}
