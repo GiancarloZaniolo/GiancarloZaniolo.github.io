@@ -51,3 +51,11 @@ body{
   color: black;
   margin: 20px 30px 30px 30px;
 }
+
+.main-page{
+  font-size: 16px;
+  font-weight: 400;
+  color: #4f4f4f;
+  text-decoration: underline;
+  margin: 60px 0px 0px 50px;
+}
