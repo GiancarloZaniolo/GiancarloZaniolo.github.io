@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1"><meta name="generator" content="MATLAB R2020a"><title>List of Data Manipulation Methods and Algorithms Used in the Bike Accelerometer Project</title><style type="text/css">.rtcContent { padding: 30px; } .S0 { margin: 3px 10px 5px 4px; padding: 0px; line-height: 28.8px; min-height: 0px; white-space: pre-wrap; color: rgb(213, 80, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 24px; font-weight: 400; text-align: left;  }
+.S1 { margin: 2px 10px 9px 4px; padding: 0px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: 400; text-align: left;  }
+.S2 { margin: 20px 10px 5px 4px; padding: 0px; line-height: 20px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 20px; font-weight: 700; text-align: left;  }
+.S3 { margin: 10px 10px 5px 4px; padding: 0px; line-height: 18px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 15px; font-weight: 700; text-align: left;  }
+.CodeBlock { background-color: #F7F7F7; margin: 10px 0 10px 0;}
+.S4 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 4px 4px 0px 0px; padding: 6px 45px 4px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S5 { color: rgb(64, 64, 64); padding: 10px 0px 6px 17px; background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box; font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px; overflow-x: hidden; line-height: 17.234px;  }
+.embeddedOutputsErrorElement {min-height: 18px; max-height: 250px; overflow: auto;}
+.embeddedOutputsErrorElement.inlineElement {}
+.embeddedOutputsErrorElement.rightPaneElement {}
+.embeddedOutputsWarningElement{min-height: 18px; max-height: 250px; overflow: auto;}
+.embeddedOutputsWarningElement.inlineElement {}
+.embeddedOutputsWarningElement.rightPaneElement {}
+.diagnosticMessage-wrapper {font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 12px;}
+.diagnosticMessage-wrapper.diagnosticMessage-warningType {color: rgb(255,100,0);}
+.diagnosticMessage-wrapper.diagnosticMessage-warningType a {color: rgb(255,100,0); text-decoration: underline;}
+.diagnosticMessage-wrapper.diagnosticMessage-errorType {color: rgb(230,0,0);}
+.diagnosticMessage-wrapper.diagnosticMessage-errorType a {color: rgb(230,0,0); text-decoration: underline;}
+.diagnosticMessage-wrapper .diagnosticMessage-messagePart,.diagnosticMessage-wrapper .diagnosticMessage-causePart {white-space: pre-wrap;}
+.diagnosticMessage-wrapper .diagnosticMessage-stackPart {white-space: pre;}
+.embeddedOutputsTextElement,.embeddedOutputsVariableStringElement {white-space: pre; word-wrap: initial; min-height: 18px; max-height: 250px; overflow: auto;}
+.textElement,.rtcDataTipElement .textElement {padding-top: 3px;}
+.embeddedOutputsTextElement.inlineElement,.embeddedOutputsVariableStringElement.inlineElement {}
+.inlineElement .textElement {}
+.embeddedOutputsTextElement.rightPaneElement,.embeddedOutputsVariableStringElement.rightPaneElement {min-height: 16px;}
+.rightPaneElement .textElement {padding-top: 2px; padding-left: 9px;}
+.S6 { margin: 10px 10px 9px 4px; padding: 0px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: 400; text-align: left;  }
+.S7 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 4px; padding: 6px 45px 4px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S8 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 0px none rgb(0, 0, 0); border-radius: 4px 4px 0px 0px; padding: 6px 45px 0px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S9 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 0px none rgb(0, 0, 0); border-radius: 0px; padding: 0px 45px 0px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S10 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 0px 0px 4px 4px; padding: 0px 45px 4px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S11 { margin: 15px 10px 5px 4px; padding: 0px; line-height: 18px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 17px; font-weight: 700; text-align: left;  }</style></head><body><div class = rtcContent><h1  class = 'S0'><span>List of Data Manipulation Methods and Algorithms Used in the Bike Accelerometer Project</span></h1><div  class = 'S1'><span>by Giancarlo Zaniolo</span></div><div  class = 'S1'><span></span></div><h2  class = 'S2'><span>Modifying the Raw Data to Produce Different Graphs</span></h2><div  class = 'S1'><span>This section covers all of the ways that the raw data was manipulated to display different representations of the actions performed in each experiment.</span></div><h4  class = 'S3'><span>Total Vector Magnitude</span></h4><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S4'><span style="white-space: pre;"><span>netExperimentAllDirections = sqrt(xExperiment.^2 + yExperiment.^2 + zExperiment.^2);</span></span></div><div  class = 'S5'><div class="inlineElement eoOutputWrapper embeddedOutputsErrorElement" uid="7D53D758" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-width="837" data-height="18" data-hashorizontaloverflow="false" data-testid="output_0" style="max-height: 261px; width: 867px;"><div class="diagnosticMessage-wrapper diagnosticMessage-errorType"><div class="diagnosticMessage-messagePart">Unrecognized function or variable 'xExperiment'.</div><div class="diagnosticMessage-stackPart"></div></div></div></div></div></div><div  class = 'S6'><span>First seen in: Experiment 1</span></div><div  class = 'S1'><span>Description: This value shows the magnitude of the net vector of the measured x, y, and z vectors.</span></div><div  class = 'S1'><span>Utility: This graph is able to preserve the choppiness of the graphs, if that is that you are looking for, but it cannot tell you which direction the force is in, and is therefore not very useful when developing algorithms to interperet patterns in the data.</span></div><h4  class = 'S3'><span>Polar Form Graphing</span></h4><h4  class = 'S3'><span>Rho</span></h4><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span>rhoExperiment = sqrt(xExperiment.^2 + yExperiment.^2 + zExperiment.^2);</span></span></div></div></div><div  class = 'S6'><span>First seen in: Experiment 1</span></div><div  class = 'S1'><span>Description: This is the same as the total vector magnitude.</span></div><div  class = 'S1'><span>Utility: This is the same as the total vector magnitude.</span></div><h4  class = 'S3'><span>Theta</span></h4><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span>thetaExperiment = atand(xExperiment./zExperiment);</span></span></div></div></div><div  class = 'S6'><span>First seen in: Experiment 1</span></div><div  class = 'S1'><span>Description: This value shows the theta value if the net vector were to be plotted in polar spherical form.</span></div><div  class = 'S1'><span>Utility: Compared to the vertical acceleration forces, the horizontal acceleration forces are almost nothing, and because the plane where the theta value lies on is parallel to the ground, most of the data obtained from this means nothing. The only case where this could potentially be used is if the bike were to be set down on its side.</span></div><h4  class = 'S3'><span>Phi</span></h4><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span>phiExperiment = acosd(yExperiment./rhoExperiment);</span></span></div></div></div><div  class = 'S6'><span>First seen in: Experiment 1</span></div><div  class = 'S1'><span>Description: This value shows the phi value if the net vector were to be plotted in polar spherical form.</span></div><div  class = 'S1'><span>Utility: This value's main use is that it can show you more or less what angle the phone is tilted at before using the y/z correction algorithm, but it does have its limitations that prevent it from being a good measurement for data analysis. Since the phi plane is always pretty much perpendicular to the ground, it is very hard to see when there is a stronger downward force than gravity. Also, because this is a measure of the angle, and not of the magnitude of the force, when the bike is in free-fall and the forces are very small, the phi value just sorta goes crazy.</span></div><h2  class = 'S2'><span>Data Correction Algorithms</span></h2><h4  class = 'S3'><span>Y/Z Tilt Correction</span></h4><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>yComponentCorrectedYBunnyhop = yBunnyhop * cosd(phoneAngle);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>zComponentCorrectedYBunnyhop = zBunnyhop * cosd(90 - phoneAngle);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>correctedYBunnyhop = yComponentCorrectedYBunnyhop + zComponentCorrectedYBunnyhop;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>yComponentCorrectedZBunnyhop = yBunnyhop * cosd(90 - phoneAngle);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>zComponentCorrectedZBunnyhop = zBunnyhop * cosd(phoneAngle);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div><div class="inlineWrapper"><div  class = 'S10'><span style="white-space: pre;"><span>correctedZBunnyhop = yComponentCorrectedZBunnyhop + zComponentCorrectedZBunnyhop;</span></span></div></div></div><div  class = 'S6'><span>First seen in: Experiment 2</span></div><div  class = 'S1'><span>Description: This algorithm corrects for any tilt affecting the y and z axes if provided the angle at which the measurement device is tilted.</span></div><div  class = 'S1'><span>Utility: This algorithm will be especially useful when mounting the measurement device to a surface that is not perpendicular to the ground, since it allows the y-value to be kept perpendicular to the ground. This allows the corrected y-axis value, which has both positive and negative values, to be used instead doing a vector magnitude calculation, which provides the magnitude of the force, but no direction.</span></div><h4  class = 'S3'><span>Bump Interference Correction</span></h4><h4  class = 'S3'><span>Matlab's Built-in Smooth Function</span></h4><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span>smoothedExperiment = smooth(yExperiment);</span></span></div></div></div><div  class = 'S6'><span>First seen in: Experiment 2</span></div><div  class = 'S1'><span>Description: This is Matlab's built-in algorithm for smoothing out data.</span></div><div  class = 'S1'><span>Utility: This function does a good job at smoothing out the data, but it still leaves a little bit of interference, no matter how many times you loop the data through. It does a good job at keeping the height of the peaks even after multiple smoothings of the data. This would be a good function to use if you want to measure what forces the bike was more realistically feeling during the jump.</span></div><h4  class = 'S3'><span>Smoothing Data Using an Average of Nearby Values</span></h4><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>numberOfSmoothings = 100;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>numberOnEachSide = 1;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>valueAvgArray = zeros(length(yExperiment), 1);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>valueAvgArray2 = yExperiment;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">for </span><span>k = 1 : numberOfSmoothings</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">for </span><span>i = 1 : numberOnEachSide</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    valueAvg = 0;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">for </span><span>j = (-i + 1) : numberOnEachSide</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>        valueAvg = valueAvg + (valueAvgArray2(i + j));</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    valueAvg = valueAvg / (numberOnEachSide + i);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    valueAvgArray(i) = valueAvg;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">for </span><span>i = numberOnEachSide + 1: (length(valueAvgArray2) - numberOnEachSide)</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>        valueAvg = 0;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>        </span><span style="color: rgb(0, 0, 255);">for </span><span>j = -numberOnEachSide : numberOnEachSide</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>            valueAvg = valueAvg + (valueAvgArray2(i + j));</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>        </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>        valueAvg = valueAvg / ((2 * numberOnEachSide) + 1);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>        valueAvgArray(i) = valueAvg;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">for </span><span>i = (numberOnEachSide - 1) : -1: 0</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>        valueAvg = 0;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>        </span><span style="color: rgb(0, 0, 255);">for </span><span>j = -numberOnEachSide : i</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>            valueAvg = valueAvg + (valueAvgArray2(length(valueAvgArray2) - i + j));</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>        </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>        valueAvg = valueAvg / (numberOnEachSide + i + 1);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>        valueAvgArray(length(valueAvgArray2) - i) = valueAvg;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    valueAvgArray2 = valueAvgArray;</span></span></div></div><div class="inlineWrapper"><div  class = 'S10'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div></div><div  class = 'S6'><span>First seen in: Experiment 2</span></div><div  class = 'S1'><span>Description: This smoothing algorithm takes the average of the x points to the right the central point, the central point, and the x points to the right of the central point, and can be repeated as many times as needed.</span></div><div  class = 'S1'><span>Utility: This function does a good job at smoothing out the data, and the more you loop re-smooth the data, the more smooth it becomes. However, the more times you smooth it, the more rounded and less prominent the peaks become. This would be a good function to use if you want to make sure there is minimal interference, but the general shape of the jump is still there.</span></div><h2  class = 'S2'><span>Data Analysis Algorithms</span></h2><h3  class = 'S11'><span>Jump Detection Algorithms</span></h3><h4  class = 'S3'><span>Jump Detection Algorithm 1 (Two Largest Peaks)</span></h4><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>lowestValue = 0;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>lowestValueIndex = 0;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>secondLowestValue = 0;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>secondLowestValueIndex = 0;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">for </span><span>i = 2: (length(yBunnyhop)-1)</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    </span><span style="color: rgb(60, 118, 61);">%detects if it is a peak</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">if </span><span>yBunnyhop(i) &lt; yBunnyhop(i-1)</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>        </span><span style="color: rgb(0, 0, 255);">if </span><span>yBunnyhop(i) &lt; yBunnyhop(i+1)</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>            </span><span style="color: rgb(60, 118, 61);">%checks to see if it qualifies for one of the lowest value</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>            </span><span style="color: rgb(60, 118, 61);">%slots</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>            </span><span style="color: rgb(0, 0, 255);">if </span><span>yBunnyhop(i) &lt; secondLowestValue</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                </span><span style="color: rgb(0, 0, 255);">if </span><span>yBunnyhop(i) &lt; lowestValue</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                    </span><span style="color: rgb(60, 118, 61);">%checs to see if new lowest value is at least 25 100ths</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                    </span><span style="color: rgb(60, 118, 61);">%of a second away from old lowest, if it is, old lowest</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                    </span><span style="color: rgb(60, 118, 61);">%replaces old second lowest</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                    </span><span style="color: rgb(60, 118, 61);">%makes sure lowest is the lowest within a 50 100ths of</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                    </span><span style="color: rgb(60, 118, 61);">%a second range</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                    </span><span style="color: rgb(0, 0, 255);">if </span><span>abs(i - lowestValueIndex) &gt; 25</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                        secondLowestValue = lowestValue;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                        secondLowestValueIndex = lowestValueIndex;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                    </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                    lowestValue = yBunnyhop(i);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                    lowestValueIndex = i;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                </span><span style="color: rgb(0, 0, 255);">else</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                    </span><span style="color: rgb(0, 0, 255);">if </span><span>yBunnyhop(i) &lt; secondLowestValue</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                        </span><span style="color: rgb(60, 118, 61);">%only sets new second lowest value if it is far</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                        </span><span style="color: rgb(60, 118, 61);">%enough from lowest</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                        </span><span style="color: rgb(0, 0, 255);">if </span><span>abs(i - lowestValueIndex) &gt; 25</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                            secondLowestValue = yBunnyhop(i);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                            secondLowestValueIndex = i;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                        </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                    </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>            </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>        </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S10'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div></div><div  class = 'S6'><span>First seen in: Experiment 2</span></div><div  class = 'S1'><span>Description: This jump detection algorithm finds the takeoff and landing of the jump by finding the the lowest and second lowest acceleration peaks.</span></div><div  class = 'S1'><span>Utility: This algorithm is only useful in super specific scenarios: The takeoff and landing have to be the largest peaks, meaning that drops will not be visible, and the flat ground has to be smooth enough for the second largest peak to be the takeoff. Aditionally, there can only be 1 jump. It is unlikely that this exact algorithm will be used in the future.</span></div><h4  class = 'S3'><span>Jump Detection Algorithm 2 (Disturbance-Based)</span></h4><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>airCounter = 0;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>modeArray = zeros(length(yPlasticRamp), 1);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(60, 118, 61);">%you are most likely still when you start the test, and this starts off the chain reaction where if the previous value is 1 and the threshold has not been passed, the next value will also automatically be 1</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>modeArray(1) = 1;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>threshold = 16;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">for </span><span>i = 2: (length(yPlasticRamp) - 5)</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    sumOfPoints = 0;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">for </span><span>j = 0: 4</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>        sumOfPoints = sumOfPoints + abs(yPlasticRamp(i + j) - yPlasticRamp(i + j + 1));</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    </span><span style="color: rgb(60, 118, 61);">%if it passes the threshold (moving on bumpy enough ground)</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">if </span><span>sumOfPoints &gt; threshold</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>        </span><span style="color: rgb(60, 118, 61);">%if in "air" for less than 0.25 secs before jump lands, read over</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>        </span><span style="color: rgb(60, 118, 61);">%all "air"s with 2s</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>        </span><span style="color: rgb(0, 0, 255);">if </span><span>airCounter &lt; 25</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>            </span><span style="color: rgb(0, 0, 255);">for </span><span>j = i: -1: (i - airCounter)</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                modeArray(j) = 2;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>            </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>        </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>        modeArray(i) = 2;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>        airCounter = 0;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>        </span><span style="color: rgb(60, 118, 61);">%if it doesnt pass the threshold (either still or in air)</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">elseif </span><span>sumOfPoints &lt; threshold</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>            </span><span style="color: rgb(60, 118, 61);">%if its stopped it stays stopped</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>            </span><span style="color: rgb(0, 0, 255);">if </span><span>modeArray(i - 1) == 1 || length(yPlasticRamp) - i &lt; 300</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                modeArray(i) = 1;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>            </span><span style="color: rgb(60, 118, 61);">%if its still for too long it counts it as stopped, reads over</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>            </span><span style="color: rgb(60, 118, 61);">%all "air"s with 1s</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>            </span><span style="color: rgb(0, 0, 255);">elseif </span><span>airCounter &gt;= 300</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                </span><span style="color: rgb(0, 0, 255);">for </span><span>j = i: -1: (i - airCounter)</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                    modeArray(j) = 1;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>            </span><span style="color: rgb(0, 0, 255);">else</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>                modeArray(i) = 3;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>            </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>            airCounter = airCounter + 1;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S10'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div></div><div  class = 'S6'><span>First seen in: Experiment 2</span></div><div  class = 'S1'><span>Description: This jump detection algorithm defines the time in the air based on if there is a lot of shaking on the graph, caused by bumps on the ground.</span></div><div  class = 'S1'><span>Utility: This algorithm is also only useful in specific scenarios, but it has one key advantage over algorithm 1: it works even with multiple jumps. However, it has the disadvantage that it only works if the bike is bumping around when it is moving, which means that it will likely not work as well on smooth surfaces like skateparks, or when the measurement device is mounted to a bike with suspension. Also, this algorithm will not work well on bump interference-corrected data, so it is unlikely that this will be used outside of very specific scenarios.</span></div></div>
+<br>
+<!-- 
+##### SOURCE BEGIN #####
+%% List of Data Manipulation Methods and Algorithms Used in the Bike Accelerometer Project
+% by Giancarlo Zaniolo
+% 
+% 
+%% Modifying the Raw Data to Produce Different Graphs
+% This section covers all of the ways that the raw data was manipulated to display 
+% different representations of the actions performed in each experiment.
+% Total Vector Magnitude
+
+netExperimentAllDirections = sqrt(xExperiment.^2 + yExperiment.^2 + zExperiment.^2);
+%% 
+% First seen in: Experiment 1
+% 
+% Description: This value shows the magnitude of the net vector of the measured 
+% x, y, and z vectors.
+% 
+% Utility: This graph is able to preserve the choppiness of the graphs, if that 
+% is that you are looking for, but it cannot tell you which direction the force 
+% is in, and is therefore not very useful when developing algorithms to interperet 
+% patterns in the data.
+% Polar Form Graphing
+% Rho
+
+rhoExperiment = sqrt(xExperiment.^2 + yExperiment.^2 + zExperiment.^2);
+%% 
+% First seen in: Experiment 1
+% 
+% Description: This is the same as the total vector magnitude.
+% 
+% Utility: This is the same as the total vector magnitude.
+% Theta
+
+thetaExperiment = atand(xExperiment./zExperiment);
+%% 
+% First seen in: Experiment 1
+% 
+% Description: This value shows the theta value if the net vector were to be 
+% plotted in polar spherical form.
+% 
+% Utility: Compared to the vertical acceleration forces, the horizontal acceleration 
+% forces are almost nothing, and because the plane where the theta value lies 
+% on is parallel to the ground, most of the data obtained from this means nothing. 
+% The only case where this could potentially be used is if the bike were to be 
+% set down on its side.
+% Phi
+
+phiExperiment = acosd(yExperiment./rhoExperiment);
+%% 
+% First seen in: Experiment 1
+% 
+% Description: This value shows the phi value if the net vector were to be plotted 
+% in polar spherical form.
+% 
+% Utility: This value's main use is that it can show you more or less what angle 
+% the phone is tilted at before using the y/z correction algorithm, but it does 
+% have its limitations that prevent it from being a good measurement for data 
+% analysis. Since the phi plane is always pretty much perpendicular to the ground, 
+% it is very hard to see when there is a stronger downward force than gravity. 
+% Also, because this is a measure of the angle, and not of the magnitude of the 
+% force, when the bike is in free-fall and the forces are very small, the phi 
+% value just sorta goes crazy.
+%% Data Correction Algorithms
+% Y/Z Tilt Correction
+
+yComponentCorrectedYBunnyhop = yBunnyhop * cosd(phoneAngle);
+zComponentCorrectedYBunnyhop = zBunnyhop * cosd(90 - phoneAngle);
+
+correctedYBunnyhop = yComponentCorrectedYBunnyhop + zComponentCorrectedYBunnyhop;
+
+yComponentCorrectedZBunnyhop = yBunnyhop * cosd(90 - phoneAngle);
+zComponentCorrectedZBunnyhop = zBunnyhop * cosd(phoneAngle);
+
+correctedZBunnyhop = yComponentCorrectedZBunnyhop + zComponentCorrectedZBunnyhop;
+%% 
+% First seen in: Experiment 2
+% 
+% Description: This algorithm corrects for any tilt affecting the y and z axes 
+% if provided the angle at which the measurement device is tilted.
+% 
+% Utility: This algorithm will be especially useful when mounting the measurement 
+% device to a surface that is not perpendicular to the ground, since it allows 
+% the y-value to be kept perpendicular to the ground. This allows the corrected 
+% y-axis value, which has both positive and negative values, to be used instead 
+% doing a vector magnitude calculation, which provides the magnitude of the force, 
+% but no direction.
+% Bump Interference Correction
+% Matlab's Built-in Smooth Function
+
+smoothedExperiment = smooth(yExperiment);
+%% 
+% First seen in: Experiment 2
+% 
+% Description: This is Matlab's built-in algorithm for smoothing out data.
+% 
+% Utility: This function does a good job at smoothing out the data, but it still 
+% leaves a little bit of interference, no matter how many times you loop the data 
+% through. It does a good job at keeping the height of the peaks even after multiple 
+% smoothings of the data. This would be a good function to use if you want to 
+% measure what forces the bike was more realistically feeling during the jump.
+% Smoothing Data Using an Average of Nearby Values
+
+numberOfSmoothings = 100;
+numberOnEachSide = 1;
+
+valueAvgArray = zeros(length(yExperiment), 1);
+valueAvgArray2 = yExperiment;
+
+for k = 1 : numberOfSmoothings
+    for i = 1 : numberOnEachSide
+    valueAvg = 0;
+    for j = (-i + 1) : numberOnEachSide
+        valueAvg = valueAvg + (valueAvgArray2(i + j));
+    end
+    valueAvg = valueAvg / (numberOnEachSide + i);
+    valueAvgArray(i) = valueAvg;
+    end
+    for i = numberOnEachSide + 1: (length(valueAvgArray2) - numberOnEachSide)
+        valueAvg = 0;
+        for j = -numberOnEachSide : numberOnEachSide
+            valueAvg = valueAvg + (valueAvgArray2(i + j));
+        end
+        valueAvg = valueAvg / ((2 * numberOnEachSide) + 1);
+        valueAvgArray(i) = valueAvg;
+    end
+    for i = (numberOnEachSide - 1) : -1: 0
+        valueAvg = 0;
+        for j = -numberOnEachSide : i
+            valueAvg = valueAvg + (valueAvgArray2(length(valueAvgArray2) - i + j));
+        end
+        valueAvg = valueAvg / (numberOnEachSide + i + 1);
+        valueAvgArray(length(valueAvgArray2) - i) = valueAvg;
+    end
+    valueAvgArray2 = valueAvgArray;
+end
+%% 
+% First seen in: Experiment 2
+% 
+% Description: This smoothing algorithm takes the average of the x points to 
+% the right the central point, the central point, and the x points to the right 
+% of the central point, and can be repeated as many times as needed.
+% 
+% Utility: This function does a good job at smoothing out the data, and the 
+% more you loop re-smooth the data, the more smooth it becomes. However, the more 
+% times you smooth it, the more rounded and less prominent the peaks become. This 
+% would be a good function to use if you want to make sure there is minimal interference, 
+% but the general shape of the jump is still there.
+%% Data Analysis Algorithms
+% Jump Detection Algorithms
+% Jump Detection Algorithm 1 (Two Largest Peaks)
+
+lowestValue = 0;
+lowestValueIndex = 0;
+secondLowestValue = 0;
+secondLowestValueIndex = 0;
+for i = 2: (length(yBunnyhop)-1)
+    %detects if it is a peak
+    if yBunnyhop(i) < yBunnyhop(i-1)
+        if yBunnyhop(i) < yBunnyhop(i+1)
+            %checks to see if it qualifies for one of the lowest value
+            %slots
+            if yBunnyhop(i) < secondLowestValue
+                if yBunnyhop(i) < lowestValue
+                    %checs to see if new lowest value is at least 25 100ths
+                    %of a second away from old lowest, if it is, old lowest
+                    %replaces old second lowest
+                    %makes sure lowest is the lowest within a 50 100ths of
+                    %a second range
+                    if abs(i - lowestValueIndex) > 25
+                        secondLowestValue = lowestValue;
+                        secondLowestValueIndex = lowestValueIndex;
+                    end
+                    lowestValue = yBunnyhop(i);
+                    lowestValueIndex = i;
+                else
+                    if yBunnyhop(i) < secondLowestValue
+                        %only sets new second lowest value if it is far
+                        %enough from lowest
+                        if abs(i - lowestValueIndex) > 25
+                            secondLowestValue = yBunnyhop(i);
+                            secondLowestValueIndex = i;
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+%% 
+% First seen in: Experiment 2
+% 
+% Description: This jump detection algorithm finds the takeoff and landing of 
+% the jump by finding the the lowest and second lowest acceleration peaks.
+% 
+% Utility: This algorithm is only useful in super specific scenarios: The takeoff 
+% and landing have to be the largest peaks, meaning that drops will not be visible, 
+% and the flat ground has to be smooth enough for the second largest peak to be 
+% the takeoff. Aditionally, there can only be 1 jump. It is unlikely that this 
+% exact algorithm will be used in the future.
+% Jump Detection Algorithm 2 (Disturbance-Based)
+
+airCounter = 0;
+modeArray = zeros(length(yPlasticRamp), 1);
+%you are most likely still when you start the test, and this starts off the chain reaction where if the previous value is 1 and the threshold has not been passed, the next value will also automatically be 1
+modeArray(1) = 1;
+threshold = 16;
+
+for i = 2: (length(yPlasticRamp) - 5)
+    sumOfPoints = 0;
+    for j = 0: 4
+        sumOfPoints = sumOfPoints + abs(yPlasticRamp(i + j) - yPlasticRamp(i + j + 1));
+    end
+    %if it passes the threshold (moving on bumpy enough ground)
+    if sumOfPoints > threshold
+        %if in "air" for less than 0.25 secs before jump lands, read over
+        %all "air"s with 2s
+        if airCounter < 25
+            for j = i: -1: (i - airCounter)
+                modeArray(j) = 2;
+            end
+        end
+        modeArray(i) = 2;
+        airCounter = 0;
+        %if it doesnt pass the threshold (either still or in air)
+    elseif sumOfPoints < threshold
+            %if its stopped it stays stopped
+            if modeArray(i - 1) == 1 || length(yPlasticRamp) - i < 300
+                modeArray(i) = 1;
+            %if its still for too long it counts it as stopped, reads over
+            %all "air"s with 1s
+            elseif airCounter >= 300
+                for j = i: -1: (i - airCounter)
+                    modeArray(j) = 1;
+                end
+            else
+                modeArray(i) = 3;
+            end
+            airCounter = airCounter + 1;
+    end
+end
+%% 
+% First seen in: Experiment 2
+% 
+% Description: This jump detection algorithm defines the time in the air based 
+% on if there is a lot of shaking on the graph, caused by bumps on the ground.
+% 
+% Utility: This algorithm is also only useful in specific scenarios, but it 
+% has one key advantage over algorithm 1: it works even with multiple jumps. However, 
+% it has the disadvantage that it only works if the bike is bumping around when 
+% it is moving, which means that it will likely not work as well on smooth surfaces 
+% like skateparks, or when the measurement device is mounted to a bike with suspension. 
+% Also, this algorithm will not work well on bump interference-corrected data, 
+% so it is unlikely that this will be used outside of very specific scenarios.
+##### SOURCE END #####
+--></body></html>
