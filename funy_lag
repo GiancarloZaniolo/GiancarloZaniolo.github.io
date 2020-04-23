@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!-- link everything-->
+    <!--at some point link css file-->
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+</head>
+
+<body>
+  <h1>LOL! You're processors gettin MAXED</h1>
+    <script>
+        console.log("chongo");
+
+        const website = "https://api.quarantine.country/api/v1/summary/latest";
+
+        const url = website;
+        var countryNameArray = [];
+        var dataLoaded = false;
+
+        countryNameArray = logFetch(url, countryNameArray);
+
+        async function logFetch(url, countryNameArray) {
+            dataLoaded = false;
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                for (const element in data.data.regions){
+                    //console.log(data.data.regions[element].total_cases);
+                    countryNameArray.push(element);
+                }
+                //console.log(data);
+            }
+            catch (error){
+                console.log(error);
+            }
+            dataLoaded = true;
+            return countryNameArray;
+        }
+        
+        
+        console.log("it works");
+        while (dataLoaded === false){
+            setTimeout(console.log("waiting"),100);
+        }
+        for(let i = 0; i < countryNameArray.length; i++)
+        {
+            console.log(countryNameArray[i]);
+        }
+        
+
+    </script>
+</body>
+
+
+</html>
