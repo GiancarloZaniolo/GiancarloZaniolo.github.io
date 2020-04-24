@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!-- link everything-->
+    <!--at some point link css file-->
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+</head>
+
+<body>
+    <form id="form" autocomplete="off">
+        <label for="input">Country box</label>
+        <input type="text" id="input" value="">
+        <button id="submit">Submit Country</button>
+    </form>
+    <div id="responseField">
+
+    </div>
+    <script>
+        //these are url variables
+        const website = "https://api.quarantine.country/api/v1/summary/latest";
+        //var dataLoaded = false;
+        const url = website;
+        //change this later if you need a more complicated url
+
+        //input field variables
+        const inputField = document.querySelector('#input');
+        const submit = document.querySelector('#submit');
+        const responseField = document.querySelector('#responseField');
+
+        submit.addEventListener("click", submitButtonClicked);
+
+        function submitButtonClicked(event) {
+            event.preventDefault();
+            //console.log(inputField.value + " " + submit.value);
+            while (responseField.firstChild) {
+                responseField.removeChild(responseField.firstChild);
+            }
+            const countryName = inputField.value.toLowerCase();
+            fetchCountryData(url, countryName);
+        }
+
+        async function fetchCountryData(url, countryName) {
+            try {
+                const response = await fetch(url);
+                const responseJSON = await response.json();
+                for (const element in responseJSON.data.regions) {
+                    if (countryName === element) {
+                        console.log("I found " + element);
+                        //check to see if needs async
+                        renderCountryData(responseJSON, countryName);
+                    }
+                }
+            }
+            catch (error) {
+                console.log(error);
+                console.log(element + " not found");
+                //render "error with the API"
+            }
+            //if the country exists, call render response
+            //if it doesnt, render "failure" response from function
+
+        }
+
+        //check to see if it needs async
+        function renderCountryData(responseJSON, countryName){
+            let toBeRendered = [];
+            
+            for(const element in responseJSON.data.regions[countryName])
+            {
+                toBeRendered.push(`${element}:   ${responseJSON.data.regions[countryName][element]} </br>`)
+            }
+            responseField.innerHTML = `<p>Here are ${countryName}s properties: </p><ul>${toBeRendered}</ul>`
+        }
+
+        //this is a test function for now
+        async function logFetch(url, countryNameArray) {
+            //dataLoaded = false;
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                for (const element in data.data.regions) {
+                    //console.log(element);
+                    //console.log(data.data.regions[element].total_cases);
+                    countryNameArray.push(element);
+                }
+                //console.log(data);
+            }
+            catch (error) {
+                console.log(error);
+            }
+            dataLoaded = true;
+            console.log(dataLoaded);
+            return countryNameArray;
+        }
+
+        function renderResponse(response) {
+            //renders json response
+            //make sure to use document.getElementById( *insert element id* ).innerHTML = [formatted html]
+            //codeacademy code: responseField.innerHTML = `<text>${JSON.stringify(trimmedResponse)}</text>`;
+        }
+
+
+
+
+    </script>
+</body>
+
+
+</html>
