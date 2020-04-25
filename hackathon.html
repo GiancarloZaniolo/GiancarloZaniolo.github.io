@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+</head>
+
+<body>
+    <form id="form" autocomplete="off">
+        <label class="countryBox" for="input">State box</label>
+        <input type="text" id="stateInput" value="">
+        <label class="countryBox" for="input">County box</label>
+        <input type="text" id="countyInput" value="">
+        <button id="submit">Submit Values</button>
+    </form>
+    <div id="responseField">
+
+    </div>
+
+    <canvas id="firstChart"></canvas>
+    <!--change up the width and height variables later-->
+
+    <script>
+        //these are url variables
+        const website = "https://api.quarantine.country/api/v1/summary/latest";
+        const countyUrl = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv"
+        const stateUrl = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv"
+        //var dataLoaded = false;
+        const url = website;
+        //change this later if you need a more complicated url
+
+        //input field variables
+        const stateInputField = document.querySelector('#stateInput');
+        const countyInputField = document.querySelector('#countyInput');
+        const submit = document.querySelector('#submit');
+        const responseField = document.querySelector('#responseField');
+
+        submit.addEventListener("click", submitButtonClicked);
+
+        function submitButtonClicked(event) {
+            event.preventDefault();
+            while (responseField.firstChild) {
+                responseField.removeChild(responseField.firstChild);
+            }
+            //check what other formatting I have to do to facilitate functionality
+            //FIX LATER
+            //const countyName = countyInputField.value.toLowerCase();
+            //const stateName = stateInputField.value.toLowerCase();
+            const countyName = countyInputField.value;
+            const stateName = stateInputField.value;
+
+            fetchCountyData(countyName, stateName);
+        }
+
+        async function fetchCountyData(countyName, stateName) {
+            if (countyName === "") {
+                try {
+                    const stateResponse = await fetch(stateUrl);
+                    const responseCSV = await stateResponse.text();
+                    console.log("Checkpoint 1 " + stateName);
+                    let tempDataArray = responseCSV.split('\n').slice(1);
+
+                    let firstArr = tempDataArray[0].split(',');
+                    let dataArray = [{
+                        state: firstArr[1],
+                        events: [{
+                            date: firstArr[0],
+                            cases: firstArr[3],
+                            deaths: firstArr[4]
+                        }]
+                    }]
+                    for (let i = 1; i < tempDataArray.length; i++) {
+                        let arr = tempDataArray[i].split(',');
+
+                        //if the state already is in the array, 
+                        let hasState = false;
+                        for (let j = 0; j < dataArray.length; j++) {
+                            if (arr[1] === dataArray[j].state) {
+                                hasState = true;
+                                dataArray[j].events.push({
+                                    date: arr[0],
+                                    cases: arr[3],
+                                    deaths: arr[4]
+                                });
+                            }
+                        }
+                        if (hasState === false) {
+                            dataArray.push({
+                                state: arr[1],
+                                events: [{
+                                    date: arr[0],
+                                    cases: arr[3],
+                                    deaths: arr[4]
+                                }]
+                            });
+                        }
+
+                    }
+
+                    //render and print out all data
+                    for (let i = 0; i < dataArray.length; i++) {
+                        if (stateName === dataArray[i].state) {
+                            let toBeRendered = [];
+                            for (let j = 0; j < dataArray[i].events.length; j++) {
+                                toBeRendered.push(`Date: ${dataArray[i].events[j].date} 
+                        Cases: ${dataArray[i].events[j].cases} 
+                        Deaths: ${dataArray[i].events[j].deaths}</br>`)
+                            }
+                            responseField.innerHTML = `<p>Here are ${stateName}s properties: </p><ul>${toBeRendered}</ul>`;
+                        }
+                    }
+
+                }
+                catch (error) {
+                    console.log(error);
+                }
+            }
+            else {
+                try {
+                    const countyResponse = await fetch(countyUrl);
+                    const responseCSV = await countyResponse.text();
+                    //console.log(await responseCSV);
+                }
+                catch (error) {
+                    console.log(error);
+                }
+            }
+
+
+        }
+
+
+        //sample chart code
+
+        function sampleChartCode() {
+
+
+            var ctx = document.getElementById('firstChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    datasets: [{
+                        label: '# of Votes',
+                        data: [12, 19, 3, 5, 2, 3],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+
+            //this is the only way I could figure out how to 
+            //resize the chart
+            myChart.canvas.parentNode.style.height = '400px';
+            myChart.canvas.parentNode.style.width = '800px';
+        }
+
+
+    </script>
+</body>
+
+
+</html>
