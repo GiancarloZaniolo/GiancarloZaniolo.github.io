@@ -551,7 +551,7 @@ Wilkes	10,010
 Wilkinson	9,432	
 Worth	21,291	Albany, GA Metropolitan Statistical Area
 Guam	 Guam	162,742	
-Hawaii	Hawaii Hawaiʻi	190,821	Hilo, HI Micropolitan Statistical Area
+Hawaii	 Hawaii	190,821	Hilo, HI Micropolitan Statistical Area
 Honolulu, City and County of	983,429	Urban Honolulu, HI Metropolitan Statistical Area
 Kalawao	90	Kahului-Wailuku-Lahaina, HI Metropolitan Statistical Area
 Kauai	69,512	Kapaa, HI Micropolitan Statistical Area
@@ -1833,7 +1833,7 @@ Taos	33,035	Taos, NM Micropolitan Statistical Area
 Torrance	15,717	Albuquerque, NM Metropolitan Statistical Area
 Union	4,370	
 Valencia	76,284	Albuquerque, NM Metropolitan Statistical Area
-Albany	New York (state) New York	306,945	Albany-Schenectady-Troy, NY Metropolitan Statistical Area
+Albany	 New York	306,945	Albany-Schenectady-Troy, NY Metropolitan Statistical Area
 Allegany	48,109	
 Bronx	1,418,733	New York-Newark-Jersey City, NY-NJ-PA Metropolitan Statistical Area
 Broome	197,534	Binghamton, NY Metropolitan Statistical Area
