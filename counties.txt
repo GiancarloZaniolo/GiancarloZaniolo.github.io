@@ -3054,7 +3054,7 @@ Virginia Beach, City of	448,479	Virginia Beach-Norfolk-Newport News, VA-NC Metro
 Waynesboro, City of	21,263	Staunton-Waynesboro, VA Metropolitan Statistical Area
 Williamsburg, City of	15,206	Virginia Beach-Norfolk-Newport News, VA-NC Metropolitan Statistical Area
 Winchester, City of	27,216	Winchester, VA-WV Metropolitan Statistical Area
-Adams	Washington (state) Washington	19,067	Othello, WA Micropolitan Statistical Area
+Adams	 Washington	19,067	Othello, WA Micropolitan Statistical Area
 Asotin	22,110	Lewiston, ID-WA Metropolitan Statistical Area
 Benton	184,486	Kennewick-Richland, WA Metropolitan Statistical Area
 Chelan	73,967	Wenatchee, WA Metropolitan Statistical Area
