@@ -65,41 +65,41 @@ Walker	65,998	Birmingham-Hoover, AL Metropolitan Statistical Area
 Washington	16,877	
 Wilcox	11,307	
 Winston	24,146	
-Aleutians East Borough[d]	 Alaska	3,092	
-Aleutians West Census Area[e]	5,511	
-Anchorage, Municipality of[d][f]	300,950	Anchorage, AK Metropolitan Statistical Area
-Bethel Census Area[e]	17,758	
-Bristol Bay Borough[d]	960	
-Chugach Census Area[e]	6,734	
-Copper River Census Area[e]	2,764	
-Denali Borough[d]	1,867	
-Dillingham Census Area[e]	5,010	
-Fairbanks North Star Borough[d]	100,436	Fairbanks, AK Metropolitan Statistical Area
-Haines Borough[d]	2,592	
-Hoonah–Angoon Census Area[e]	2,145	
-Juneau, City and Borough of[d][g]	32,660	Juneau, AK Micropolitan Statistical Area
-Kenai Peninsula Borough[d]	57,147	
-Ketchikan Gateway Borough[d]	13,729	Ketchikan, AK Micropolitan Statistical Area
-Kodiak Island Borough[d]	14,135	
-Kusilvak Census Area[e]	7,977	
-Lake and Peninsula Borough[d]	1,648	
-Matanuska-Susitna Borough[d]	95,192	Anchorage, AK Metropolitan Statistical Area
-Nome Census Area[e]	9,892	
-North Slope Borough[d]	9,686	
-Northwest Arctic Borough[d]	7,685	
-Petersburg Borough[d][h]	3,774	
-Prince of Wales – Hyder Census Area[e]	5,786	
-Sitka, City and Borough of[d][i]	9,020	
-Skagway, Municipality of[d]	995	
-Southeast Fairbanks Census Area[e]	6,985	
-Wrangell, City and Borough of[d]	2,400	
-Yakutat, City and Borough of[d][j]	642	
-Yukon–Koyukuk Census Area[e]	5,695	
-Eastern District[12]	 American Samoa	23,030	
-Manu'a District[12]	1,143	
-Rose Atoll (Rose Island)[12]	0	
-Swains Island[12]	17	
-Western District[12]	31,329	
+Aleutians East Borough	 Alaska	3,092	
+Aleutians West Census Area	5,511	
+Anchorage, Municipality of	300,950	Anchorage, AK Metropolitan Statistical Area
+Bethel Census Area	17,758	
+Bristol Bay Borough	960	
+Chugach Census Area	6,734	
+Copper River Census Area	2,764	
+Denali Borough	1,867	
+Dillingham Census Area	5,010	
+Fairbanks North Star Borough	100,436	Fairbanks, AK Metropolitan Statistical Area
+Haines Borough	2,592	
+Hoonah–Angoon Census Area	2,145	
+Juneau, City and Borough of	32,660	Juneau, AK Micropolitan Statistical Area
+Kenai Peninsula Borough	57,147	
+Ketchikan Gateway Borough	13,729	Ketchikan, AK Micropolitan Statistical Area
+Kodiak Island Borough	14,135	
+Kusilvak Census Area	7,977	
+Lake and Peninsula Borough	1,648	
+Matanuska-Susitna Borough	95,192	Anchorage, AK Metropolitan Statistical Area
+Nome Census Area	9,892	
+North Slope Borough	9,686	
+Northwest Arctic Borough	7,685	
+Petersburg Borough	3,774	
+Prince of Wales – Hyder Census Area	5,786	
+Sitka, City and Borough of	9,020	
+Skagway, Municipality of	995	
+Southeast Fairbanks Census Area	6,985	
+Wrangell, City and Borough of	2,400	
+Yakutat, City and Borough of	642	
+Yukon–Koyukuk Census Area	5,695	
+Eastern District	 American Samoa	23,030	
+Manu'a District	1,143	
+Rose Atoll (Rose Island)	0	
+Swains Island	17	
+Western District	31,329	
 Apache	 Arizona	71,934	
 Cochise	129,473	Sierra Vista-Douglas, AZ Metropolitan Statistical Area
 Coconino	136,539	Flagstaff, AZ Metropolitan Statistical Area
@@ -227,7 +227,7 @@ Sacramento	1,462,131	Sacramento–Roseville–Arden-Arcade, CA Metropolitan Stat
 San Benito	57,600	San Jose-Sunnyvale-Santa Clara, CA Metropolitan Statistical Area
 San Bernardino	2,088,371	Riverside-San Bernardino-Ontario, CA Metropolitan Statistical Area
 San Diego	3,211,252	San Diego-Carlsbad, CA Metropolitan Statistical Area
-San Francisco, City and County of[k]	837,442	San Francisco-Oakland-Hayward, CA Metropolitan Statistical Area
+San Francisco, City and County of	837,442	San Francisco-Oakland-Hayward, CA Metropolitan Statistical Area
 San Joaquin	704,379	Stockton-Lodi, CA Metropolitan Statistical Area
 San Luis Obispo	276,443	San Luis Obispo-Paso Robles-Arroyo Grande, CA Metropolitan Statistical Area
 San Mateo	747,373	San Francisco-Oakland-Hayward, CA Metropolitan Statistical Area
@@ -255,7 +255,7 @@ Archuleta	12,194
 Baca	3,682	
 Bent	5,688	
 Boulder	310,048	Boulder, CO Metropolitan Statistical Area
-Broomfield, City and County of[l]	59,471	Denver-Aurora-Lakewood, CO Metropolitan Statistical Area
+Broomfield, City and County of	59,471	Denver-Aurora-Lakewood, CO Metropolitan Statistical Area
 Chaffee	18,510	
 Cheyenne	1,890	
 Clear Creek	9,031	Denver-Aurora-Lakewood, CO Metropolitan Statistical Area
@@ -264,7 +264,7 @@ Costilla	3,518
 Crowley	5,322	
 Custer	4,285	
 Delta	30,483	
-Denver, City and County of[m]	649,495	Denver-Aurora-Lakewood, CO Metropolitan Statistical Area
+Denver, City and County of	649,495	Denver-Aurora-Lakewood, CO Metropolitan Statistical Area
 Dolores	2,029	
 Douglas	305,963	Denver-Aurora-Lakewood, CO Metropolitan Statistical Area
 Eagle	52,460	Edwards, CO Micropolitan Statistical Area
@@ -312,18 +312,18 @@ Teller	23,275	Colorado Springs, CO Metropolitan Statistical Area
 Washington	4,803	
 Weld	269,785	Greeley, CO Metropolitan Statistical Area
 Yuma	10,151	
-Fairfield[n]	 Connecticut	939,904	Bridgeport-Stamford-Norwalk, CT Metropolitan Statistical Area
-Hartford[n]	898,272	Hartford-East Hartford-Middletown, CT Metropolitan Statistical Area
-Litchfield[n]	186,924	Torrington, CT Micropolitan Statistical Area
-Middlesex[n]	165,562	Hartford-East Hartford-Middletown, CT Metropolitan Statistical Area
-New Haven[n]	862,287	New Haven-Milford, CT Metropolitan Statistical Area
-New London[n]	274,150	Norwich-New London, CT Metropolitan Statistical Area
-Tolland[n]	151,377	Hartford-East Hartford-Middletown, CT Metropolitan Statistical Area
-Windham[n]	117,604	Worcester, MA-CT Metropolitan Statistical Area
+Fairfield	 Connecticut	939,904	Bridgeport-Stamford-Norwalk, CT Metropolitan Statistical Area
+Hartford	898,272	Hartford-East Hartford-Middletown, CT Metropolitan Statistical Area
+Litchfield	186,924	Torrington, CT Micropolitan Statistical Area
+Middlesex	165,562	Hartford-East Hartford-Middletown, CT Metropolitan Statistical Area
+New Haven	862,287	New Haven-Milford, CT Metropolitan Statistical Area
+New London	274,150	Norwich-New London, CT Metropolitan Statistical Area
+Tolland	151,377	Hartford-East Hartford-Middletown, CT Metropolitan Statistical Area
+Windham	117,604	Worcester, MA-CT Metropolitan Statistical Area
 Kent	 Delaware	169,416	Dover, DE Metropolitan Statistical Area
 New Castle	549,684	Philadelphia-Camden-Wilmington, PA-NJ-DE-MD Metropolitan Statistical Area
 Sussex	206,649	Salisbury, MD-DE Metropolitan Statistical Area
-District of Columbia[o]	 District of Columbia	646,449	Washington-Arlington-Alexandria, DC-VA-MD-WV Metropolitan Statistical Area
+District of Columbia	 District of Columbia	646,449	Washington-Arlington-Alexandria, DC-VA-MD-WV Metropolitan Statistical Area
 Alachua	 Florida	253,451	Gainesville, FL Metropolitan Statistical Area
 Baker	27,013	Jacksonville, FL Metropolitan Statistical Area
 Bay	174,987	Panama City, FL Metropolitan Statistical Area
@@ -550,9 +550,9 @@ Wilcox	8,960
 Wilkes	10,010	
 Wilkinson	9,432	
 Worth	21,291	Albany, GA Metropolitan Statistical Area
-Guam[9]	 Guam	162,742	
+Guam	 Guam	162,742	
 Hawaii	Hawaii Hawaiʻi	190,821	Hilo, HI Micropolitan Statistical Area
-Honolulu, City and County of[p]	983,429	Urban Honolulu, HI Metropolitan Statistical Area
+Honolulu, City and County of	983,429	Urban Honolulu, HI Metropolitan Statistical Area
 Kalawao	90	Kahului-Wailuku-Lahaina, HI Metropolitan Statistical Area
 Kauai	69,512	Kapaa, HI Micropolitan Statistical Area
 Maui	160,202	Kahului-Wailuku-Lahaina, HI Metropolitan Statistical Area
@@ -1153,7 +1153,7 @@ Livingston Parish	134,053	Baton Rouge, LA Metropolitan Statistical Area
 Madison Parish	11,927	
 Morehouse Parish	27,057	Bastrop, LA Micropolitan Statistical Area
 Natchitoches Parish	39,138	Natchitoches, LA Micropolitan Statistical Area
-Orleans Parish[q]	378,715	New Orleans-Metairie, LA Metropolitan Statistical Area
+Orleans Parish	378,715	New Orleans-Metairie, LA Metropolitan Statistical Area
 Ouachita Parish	156,220	Monroe, LA Metropolitan Statistical Area
 Plaquemines Parish	23,550	New Orleans-Metairie, LA Metropolitan Statistical Area
 Pointe Coupee Parish	22,499	Baton Rouge, LA Metropolitan Statistical Area
@@ -1221,21 +1221,21 @@ Talbot	37,931	Easton, MD Micropolitan Statistical Area
 Washington	149,588	Hagerstown-Martinsburg, MD-WV Metropolitan Statistical Area
 Wicomico	100,896	Salisbury, MD-DE Metropolitan Statistical Area
 Worcester	51,620	Salisbury, MD-DE Metropolitan Statistical Area
-Baltimore City[r]	622,104	Baltimore-Columbia-Towson, MD Metropolitan Statistical Area
+Baltimore City	622,104	Baltimore-Columbia-Towson, MD Metropolitan Statistical Area
 Barnstable	 Massachusetts	214,990	Barnstable Town, MA Metropolitan Statistical Area
-Berkshire[n]	129,585	Pittsfield, MA Metropolitan Statistical Area
+Berkshire	129,585	Pittsfield, MA Metropolitan Statistical Area
 Bristol	552,780	Providence-Warwick, RI-MA Metropolitan Statistical Area
 Dukes	17,256	Vineyard Haven, MA Micropolitan Statistical Area
-Essex[n]	762,550	Boston-Cambridge-Newton, MA-NH Metropolitan Statistical Area
-Franklin[n]	71,221	Greenfield Town, MA Micropolitan Statistical Area
-Hampden[n]	467,319	Springfield, MA Metropolitan Statistical Area
-Hampshire[n]	159,596	Springfield, MA Metropolitan Statistical Area
-Middlesex[n]	1,552,802	Boston-Cambridge-Newton, MA-NH Metropolitan Statistical Area
-Nantucket, Town and County of[s]	10,399	
+Essex	762,550	Boston-Cambridge-Newton, MA-NH Metropolitan Statistical Area
+Franklin	71,221	Greenfield Town, MA Micropolitan Statistical Area
+Hampden	467,319	Springfield, MA Metropolitan Statistical Area
+Hampshire	159,596	Springfield, MA Metropolitan Statistical Area
+Middlesex	1,552,802	Boston-Cambridge-Newton, MA-NH Metropolitan Statistical Area
+Nantucket, Town and County of	10,399	
 Norfolk	687,802	Boston-Cambridge-Newton, MA-NH Metropolitan Statistical Area
 Plymouth	501,915	Boston-Cambridge-Newton, MA-NH Metropolitan Statistical Area
-Suffolk[n]	755,503	Boston-Cambridge-Newton, MA-NH Metropolitan Statistical Area
-Worcester[n]	809,106	Worcester, MA-CT Metropolitan Statistical Area
+Suffolk	755,503	Boston-Cambridge-Newton, MA-NH Metropolitan Statistical Area
+Worcester	809,106	Worcester, MA-CT Metropolitan Statistical Area
 Alcona	 Michigan	10,578	
 Alger	9,522	
 Allegan	112,531	Holland, MI Micropolitan Statistical Area
@@ -1602,7 +1602,7 @@ Wayne	13,404
 Webster	36,466	Springfield, MO Metropolitan Statistical Area
 Worth	2,090	
 Wright	18,473	
-St. Louis, City of[t]	318,416	St. Louis, MO-IL Metropolitan Statistical Area
+St. Louis, City of	318,416	St. Louis, MO-IL Metropolitan Statistical Area
 Beaverhead	 Montana	9,341	
 Big Horn	13,042	
 Blaine	6,604	
@@ -1768,7 +1768,7 @@ Pershing	6,877
 Storey	3,942	Reno, NV Metropolitan Statistical Area
 Washoe	433,731	Reno, NV Metropolitan Statistical Area
 White Pine	10,057	
-Carson City, Consolidated Municipality of[u]	54,080	Carson City, NV Metropolitan Statistical Area
+Carson City, Consolidated Municipality of	54,080	Carson City, NV Metropolitan Statistical Area
 Belknap	 New Hampshire	60,179	Laconia, NH Micropolitan Statistical Area
 Carroll	47,499	
 Cheshire	76,610	Keene, NH Micropolitan Statistical Area
@@ -1815,7 +1815,7 @@ Harding	693
 Hidalgo	4,654	
 Lea	68,062	Hobbs, NM Micropolitan Statistical Area
 Lincoln	20,105	
-Los Alamos[v]	17,798	Los Alamos, NM Micropolitan Statistical Area
+Los Alamos	17,798	Los Alamos, NM Micropolitan Statistical Area
 Luna	24,659	Deming, NM Micropolitan Statistical Area
 McKinley	73,308	Gallup, NM Micropolitan Statistical Area
 Mora	4,704	
@@ -2048,7 +2048,7 @@ Walsh	11,104
 Ward	67,990	Minot, ND Micropolitan Statistical Area
 Wells	4,206	
 Williams	29,595	Williston, ND Micropolitan Statistical Area
-Northern Islands Municipality[9]	 Northern Mariana Islands	0	
+Northern Islands Municipality	 Northern Mariana Islands	0	
 Rota Municipality	2,477	
 Saipan Municipality	48,220	
 Tinian Municipality	3,136	
@@ -2303,7 +2303,7 @@ Montour	18,541	Bloomsburg-Berwick, PA Metropolitan Statistical Area
 Northampton	299,791	Allentown-Bethlehem-Easton, PA-NJ Metropolitan Statistical Area
 Northumberland	94,076	Sunbury, PA Micropolitan Statistical Area
 Perry	45,562	Harrisburg-Carlisle, PA Metropolitan Statistical Area
-Philadelphia[w]	1,553,165	Philadelphia-Camden-Wilmington, PA-NJ-DE-MD Metropolitan Statistical Area
+Philadelphia	1,553,165	Philadelphia-Camden-Wilmington, PA-NJ-DE-MD Metropolitan Statistical Area
 Pike	56,591	New York-Newark-Jersey City, NY-NJ-PA Metropolitan Statistical Area
 Potter	17,497	
 Schuylkill	146,920	Pottsville, PA Micropolitan Statistical Area
@@ -2398,11 +2398,11 @@ Vieques Municipality	9,301
 Villalba Municipality	26,073	Ponce metropolitan area
 Yabucoa Municipality	37,941	San Juan–Caguas–Guaynabo metropolitan area
 Yauco Municipality	42,043	Yauco metropolitan area
-Bristol[n]	 Rhode Island	49,220	Providence-Warwick, RI-MA Metropolitan Statistical Area
-Kent[n]	165,035	Providence-Warwick, RI-MA Metropolitan Statistical Area
-Newport[n]	82,397	Providence-Warwick, RI-MA Metropolitan Statistical Area
-Providence[n]	628,600	Providence-Warwick, RI-MA Metropolitan Statistical Area
-Washington[n]	126,259	Providence-Warwick, RI-MA Metropolitan Statistical Area
+Bristol	 Rhode Island	49,220	Providence-Warwick, RI-MA Metropolitan Statistical Area
+Kent	165,035	Providence-Warwick, RI-MA Metropolitan Statistical Area
+Newport	82,397	Providence-Warwick, RI-MA Metropolitan Statistical Area
+Providence	628,600	Providence-Warwick, RI-MA Metropolitan Statistical Area
+Washington	126,259	Providence-Warwick, RI-MA Metropolitan Statistical Area
 Abbeville	 South Carolina	25,007	Greenwood, SC Micropolitan Statistical Area
 Aiken	164,176	Augusta-Richmond County, GA-SC Metropolitan Statistical Area
 Allendale	9,839	
@@ -2864,17 +2864,17 @@ Yoakum	8,184
 Young	18,341	
 Zapata	14,390	Zapata, TX Micropolitan Statistical Area
 Zavala	12,156	
-Bajo Nuevo Bank[x][y]	United States U.S. Minor Outlying Islands	0	
-Baker Island[8][x]	0	
-Howland Island[x]	0	
-Jarvis Island[x]	0	
-Johnston Atoll[x]	0	
-Kingman Reef[x]	0	
-Midway Islands[x]	40	
-Navassa Island[x]	0	
-Palmyra Atoll[x]	20	
-Serranilla Bank[x][y]	0	
-Wake Island[x]	100	
+Bajo Nuevo Bank	United States U.S. Minor Outlying Islands	0	
+Baker Island	0	
+Howland Island	0	
+Jarvis Island	0	
+Johnston Atoll	0	
+Kingman Reef	0	
+Midway Islands	40	
+Navassa Island	0	
+Palmyra Atoll	20	
+Serranilla Bank	0	
+Wake Island	100	
 Beaver	 Utah	6,459	
 Box Elder	50,794	Ogden-Clearfield, UT Metropolitan Statistical Area
 Cache	116,909	Logan, UT-ID Metropolitan Statistical Area
@@ -2918,7 +2918,7 @@ Rutland	60,622	Rutland, VT Micropolitan Statistical Area
 Washington	59,319	Barre, VT Micropolitan Statistical Area
 Windham	43,857	
 Windsor	56,067	Claremont-Lebanon, NH-VT Micropolitan Statistical Area
-Saint Croix Island[9]	United States Virgin Islands Virgin Islands (U.S.)	50,601	
+Saint Croix Island	United States Virgin Islands Virgin Islands (U.S.)	50,601	
 Saint John Island	4,170	
 Saint Thomas Island	51,634	
 Accomack	 Virginia	33,148	
@@ -2930,7 +2930,7 @@ Appomattox	15,255	Lynchburg, VA Metropolitan Statistical Area
 Arlington	224,906	Washington-Arlington-Alexandria, DC-VA-MD-WV Metropolitan Statistical Area
 Augusta	73,912	Staunton-Waynesboro, VA Metropolitan Statistical Area
 Bath	4,616	
-Bedford[z]	75,773	Lynchburg, VA Metropolitan Statistical Area
+Bedford	75,773	Lynchburg, VA Metropolitan Statistical Area
 Bland	6,735	
 Botetourt	33,002	Roanoke, VA Metropolitan Statistical Area
 Brunswick	16,973	
@@ -3016,44 +3016,44 @@ Westmoreland	17,612
 Wise	40,589	Big Stone Gap, VA Micropolitan Statistical Area
 Wythe	29,344	
 York	66,269	Virginia Beach-Norfolk-Newport News, VA-NC Metropolitan Statistical Area
-Alexandria, City of[aa]	148,892	Washington-Arlington-Alexandria, DC-VA-MD-WV Metropolitan Statistical Area
-Bristol, City of[aa]	17,341	Kingsport-Bristol-Bristol, TN-VA Metropolitan Statistical Area
-Buena Vista, City of[aa]	6,680	
-Charlottesville, City of[aa]	44,349	Charlottesville, VA Metropolitan Statistical Area
-Chesapeake, City of[aa]	230,571	Virginia Beach-Norfolk-Newport News, VA-NC Metropolitan Statistical Area
-Colonial Heights, City of[aa]	17,634	Richmond, VA Metropolitan Statistical Area
-Covington, City of[aa]	5,818	
-Danville, City of[aa]	42,907	Danville, VA Micropolitan Statistical Area
-Emporia, City of[aa]	5,588	
-Fairfax, City of[aa]	23,973	Washington-Arlington-Alexandria, DC-VA-MD-WV Metropolitan Statistical Area
-Falls Church, City of[aa]	13,508	Washington-Arlington-Alexandria, DC-VA-MD-WV Metropolitan Statistical Area
-Franklin, City of[aa]	8,638	
-Fredericksburg, City of[aa]	28,132	Washington-Arlington-Alexandria, DC-VA-MD-WV Metropolitan Statistical Area
-Galax, City of[aa]	7,035	
-Hampton, City of[aa]	136,699	Virginia Beach-Norfolk-Newport News, VA-NC Metropolitan Statistical Area
-Harrisonburg, City of[aa]	51,395	Harrisonburg, VA Metropolitan Statistical Area
-Hopewell, City of[aa]	22,163	Richmond, VA Metropolitan Statistical Area
-Lexington, City of[aa]	7,170	
-Lynchburg, City of[aa]	78,014	Lynchburg, VA Metropolitan Statistical Area
-Manassas, City of[aa]	41,705	Washington-Arlington-Alexandria, DC-VA-MD-WV Metropolitan Statistical Area
-Manassas Park, City of[aa]	16,149	Washington-Arlington-Alexandria, DC-VA-MD-WV Metropolitan Statistical Area
-Martinsville, City of[aa]	13,755	Martinsville, VA Micropolitan Statistical Area
-Newport News, City of[aa]	182,020	Virginia Beach-Norfolk-Newport News, VA-NC Metropolitan Statistical Area
-Norfolk, City of[aa]	246,139	Virginia Beach-Norfolk-Newport News, VA-NC Metropolitan Statistical Area
-Norton, City of[aa]	4,017	Big Stone Gap, VA Micropolitan Statistical Area
-Petersburg, City of[aa]	32,538	Richmond, VA Metropolitan Statistical Area
-Poquoson, City of[aa]	12,104	Virginia Beach-Norfolk-Newport News, VA-NC Metropolitan Statistical Area
-Portsmouth, City of[aa]	96,205	Virginia Beach-Norfolk-Newport News, VA-NC Metropolitan Statistical Area
-Radford, City of[aa]	17,184	Blacksburg-Christiansburg, VA Metropolitan Statistical Area
-Richmond, City of[aa]	214,114	Richmond, VA Metropolitan Statistical Area
-Roanoke, City of[aa]	98,465	Roanoke, VA Metropolitan Statistical Area
-Salem, City of[aa]	25,299	Roanoke, VA Metropolitan Statistical Area
-Staunton, City of[aa]	24,350	Staunton-Waynesboro, VA Metropolitan Statistical Area
-Suffolk, City of[aa]	85,728	Virginia Beach-Norfolk-Newport News, VA-NC Metropolitan Statistical Area
-Virginia Beach, City of[aa]	448,479	Virginia Beach-Norfolk-Newport News, VA-NC Metropolitan Statistical Area
-Waynesboro, City of[aa]	21,263	Staunton-Waynesboro, VA Metropolitan Statistical Area
-Williamsburg, City of[aa]	15,206	Virginia Beach-Norfolk-Newport News, VA-NC Metropolitan Statistical Area
-Winchester, City of[aa]	27,216	Winchester, VA-WV Metropolitan Statistical Area
+Alexandria, City of	148,892	Washington-Arlington-Alexandria, DC-VA-MD-WV Metropolitan Statistical Area
+Bristol, City of	17,341	Kingsport-Bristol-Bristol, TN-VA Metropolitan Statistical Area
+Buena Vista, City of	6,680	
+Charlottesville, City of	44,349	Charlottesville, VA Metropolitan Statistical Area
+Chesapeake, City of	230,571	Virginia Beach-Norfolk-Newport News, VA-NC Metropolitan Statistical Area
+Colonial Heights, City of	17,634	Richmond, VA Metropolitan Statistical Area
+Covington, City of	5,818	
+Danville, City of	42,907	Danville, VA Micropolitan Statistical Area
+Emporia, City of	5,588	
+Fairfax, City of	23,973	Washington-Arlington-Alexandria, DC-VA-MD-WV Metropolitan Statistical Area
+Falls Church, City of	13,508	Washington-Arlington-Alexandria, DC-VA-MD-WV Metropolitan Statistical Area
+Franklin, City of	8,638	
+Fredericksburg, City of	28,132	Washington-Arlington-Alexandria, DC-VA-MD-WV Metropolitan Statistical Area
+Galax, City of	7,035	
+Hampton, City of	136,699	Virginia Beach-Norfolk-Newport News, VA-NC Metropolitan Statistical Area
+Harrisonburg, City of	51,395	Harrisonburg, VA Metropolitan Statistical Area
+Hopewell, City of	22,163	Richmond, VA Metropolitan Statistical Area
+Lexington, City of	7,170	
+Lynchburg, City of	78,014	Lynchburg, VA Metropolitan Statistical Area
+Manassas, City of	41,705	Washington-Arlington-Alexandria, DC-VA-MD-WV Metropolitan Statistical Area
+Manassas Park, City of	16,149	Washington-Arlington-Alexandria, DC-VA-MD-WV Metropolitan Statistical Area
+Martinsville, City of	13,755	Martinsville, VA Micropolitan Statistical Area
+Newport News, City of	182,020	Virginia Beach-Norfolk-Newport News, VA-NC Metropolitan Statistical Area
+Norfolk, City of	246,139	Virginia Beach-Norfolk-Newport News, VA-NC Metropolitan Statistical Area
+Norton, City of	4,017	Big Stone Gap, VA Micropolitan Statistical Area
+Petersburg, City of	32,538	Richmond, VA Metropolitan Statistical Area
+Poquoson, City of	12,104	Virginia Beach-Norfolk-Newport News, VA-NC Metropolitan Statistical Area
+Portsmouth, City of	96,205	Virginia Beach-Norfolk-Newport News, VA-NC Metropolitan Statistical Area
+Radford, City of	17,184	Blacksburg-Christiansburg, VA Metropolitan Statistical Area
+Richmond, City of	214,114	Richmond, VA Metropolitan Statistical Area
+Roanoke, City of	98,465	Roanoke, VA Metropolitan Statistical Area
+Salem, City of	25,299	Roanoke, VA Metropolitan Statistical Area
+Staunton, City of	24,350	Staunton-Waynesboro, VA Metropolitan Statistical Area
+Suffolk, City of	85,728	Virginia Beach-Norfolk-Newport News, VA-NC Metropolitan Statistical Area
+Virginia Beach, City of	448,479	Virginia Beach-Norfolk-Newport News, VA-NC Metropolitan Statistical Area
+Waynesboro, City of	21,263	Staunton-Waynesboro, VA Metropolitan Statistical Area
+Williamsburg, City of	15,206	Virginia Beach-Norfolk-Newport News, VA-NC Metropolitan Statistical Area
+Winchester, City of	27,216	Winchester, VA-WV Metropolitan Statistical Area
 Adams	Washington (state) Washington	19,067	Othello, WA Micropolitan Statistical Area
 Asotin	22,110	Lewiston, ID-WA Metropolitan Statistical Area
 Benton	184,486	Kennewick-Richland, WA Metropolitan Statistical Area
