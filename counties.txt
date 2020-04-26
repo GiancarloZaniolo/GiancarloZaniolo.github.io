@@ -391,7 +391,7 @@ Volusia	500,800	Deltona-Daytona Beach-Ormond Beach, FL Metropolitan Statistical 
 Wakulla	31,022	Tallahassee, FL Metropolitan Statistical Area
 Walton	59,807	Crestview-Fort Walton Beach-Destin, FL Metropolitan Statistical Area
 Washington	24,624	
-Appling	Georgia (U.S. state) Georgia	18,440	
+Appling	Georgia	18,440	
 Atkinson	8,290	
 Bacon	11,216	
 Baker	3,341	Albany, GA Metropolitan Statistical Area
