@@ -1,0 +1,74 @@
+body{
+    /*background-color: #e7fdfd;*/
+    background-color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 70px 60px 70px 50px;
+}
+
+
+.countryBox{
+    /*font-size: 40px;*/
+    margin: 0px 15px 0px 15px;
+}
+
+.error{
+    color: #ff0000
+}
+
+.startup{
+    margin: 40px 0px 0px 0px;
+}
+
+.data{
+    /*pie chart data*/
+}
+
+.donateTitle{
+    margin: 90px 0px 0px 0px;
+}
+
+.donate{
+
+}
+
+.donateLink{
+    color: #4f4f4f;
+    text-decoration: underline;
+}
+
+.credits{
+    color: #4f4f4f;
+    margin: 90px 0px 90px 0px;
+}
+
+.instructionsContainer{
+    margin: 0px 0px 120px 0px;
+}
+
+.instructions{
+
+}
+
+.instructionsExample{
+    color: #4f4f4f
+}
+
+.supermarkets{
+    margin: 50px 0px 0px 0px;
+}
+
+.testingSites{
+    margin: 40px 0px 0px 0px;
+}
+
+li .locationName{
+
+}
+
+li .listItem{
+
+}
+
+#submit{
+    margin: 30px 0px 0px 15px;
+}
