@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+</head>
+
+<body>
+    <!--
+        Title:
+
+        chart 1
+         _________
+        |         |
+        |         |
+        |_________|
+
+                location: 
+        __% infected __% dead
+
+        chart 2
+         _________
+        |         |
+        |         |
+        |_________|
+
+        other resources:
+        Supermarkets close to lexington:
+        - ____ hours: ______
+        - ____ hours: ______
+        - ____ hours: ______
+        - ____ hours: ______
+        - ____ hours: ______
+
+        testing sites close to lexington:
+        - _____ distance: _____
+        - _____ distance: _____
+        - _____ distance: _____
+        - _____ distance: _____
+
+        Donate now <-- as a link
+        little blurb about bill and melinda gates foundation
+
+    -->
+    <h1 class='title'>Coronavirus Cases per U.S. County</h1>
+
+    <form id="form" autocomplete="off">
+        <label class="countryBox" for="input">Enter State:</label>
+        <input type="text" id="stateInput" value="">
+        <label class="countryBox" for="input">Enter County:</label>
+        <input type="text" id="countyInput" value=""> <br>
+        <button id="submit">Submit Values</button>
+    </form>
+    <div id="responseField">
+
+    </div>
+
+    <canvas id="firstChart"></canvas>
+
+    <div id="pieResponseField">
+
+    </div>
+
+
+
+
+    <canvas id="deathRatioChart"></canvas>
+
+    <div class='instructionsContainer'>
+        <h3 class='instructions'>Instructions:</h3>
+        <p class='instructions'>To see the data associated with any U.S. county, just fill in the text fields above,
+            capitalizing each word</p>
+        <p class='instructionsExample'>Ex. Florida Miami-Dade</p>
+        <p class='instructions'>If you just want to see the data for a state, leave the county field blank, and fill in
+            the state field</p>
+        <p class='instructionsExample'>Ex. Wyoming</p>
+    </div>
+
+
+    <h3>Other Resources:</h3>
+    <div class='testingSites'>
+        <h4>Testing Sites Close to Lexington:</h4>
+        <li class='locationName'>CareWell Urgent Care Lexington
+            <ul>
+                <li class='listItem'>58 Bedford St, Lexington, MA 02420</li>
+                <li class='listItem'>0.8 mile</li>
+                <li class='listItem'>(781) 538-4526</li>
+            </ul>
+        </li>
+        <li class='locationName'>PhysicianOne Urgent Care Waltham
+            <ul>
+                <li class='listItem'>1019 Trapelo Rd, Waltham, MA 02452</li>
+                <li class='listItem'>2.9 miles</li>
+                <li class='listItem'>(781) 736-1800</li>
+            </ul>
+        </li>
+        <li class='locationName'>AFC Urgent Care Waltham
+            <ul>
+                <li class='listItem'>1030 Main St. Waltham, MA 02451</li>
+                <li class='listItem'>6 miles</li>
+                <li class='listItem'>(781) 894-6900</li>
+            </ul>
+        </li>
+        <li class='locationName'>CareWell Urgent Care Cambridge Fresh Pond
+            <ul>
+                <li class='listItem'>603 Concord Ave, Cambridge, MA 02138</li>
+                <li class='listItem'>7.0 miles</li>
+                <li class='listItem'>(857) 706-1107</li>
+            </ul>
+        </li>
+        <li class='locationName'>AFC Urgent Care Stoneham
+            <ul>
+                <li class='listItem'>16 Main Street Stoneham, MA 02180</li>
+                <li class='listItem'>8.4 miles</li>
+                <li class='listItem'>(781) 279-4000</li>
+            </ul>
+        </li>
+    </div>
+
+    <div class='supermarkets'>
+        <h4>Supermarkets Close to Lexington:</h4>
+        <li class='locationName'>Wilson&rsquo;s Farm
+            <ul>
+                <li class='listItem'>Address: 10 Pleasant Street, Lexington, MA 02421</li>
+                <li class='listItem'>Phone: (781) 862-3900</li>
+                <li class='listItem'>Store Hours: 9:00 AM - 7:00 PM</li>
+                <li class='listItem'>Senior Shopping Hours: 8:00 AM - 9:00 AM</li>
+
+            </ul>
+        </li>
+        <li class='locationName'>Stop and Shop
+            <ul>
+                <li class='listItem'>Address: 1070 Lexington St Waltham, MA 02452</li>
+                <li class='listItem'>Phone: (781) 861-0457</li>
+                <li class='listItem'>Store Hours: 7:30 AM - 8:00 PM</li>
+            </ul>
+        </li>
+        <li class='locationName'>Star Market
+            <ul>
+                <li class='listItem'>Address: 36 Bedford Street Lexington, MA 02420</li>
+                <li class='listItem'>Phone: (781) 891-0615</li>
+                <li class='listItem'>Store Hours: 7:00 AM - 8:00 PM</li>
+            </ul>
+        </li>
+        <li class='locationName'>Market Basket
+            <ul>
+                <li class='listItem'>Address: 43 Middlesex Turnpike Burlington, MA 01803</li>
+                <li class='listItem'>Phone: (781) 273-3673</li>
+                <li class='listItem'>Store Hours: 7:00 AM - 6:00 PM</li>
+                <li class='listItem'>Senior Shopping Hours: 6:00 AM - 7:00 AM</li>
+            </ul>
+        </li>
+        <li class='locationName'>Trader Joes (Arlington)
+            <ul>
+                <li class='listItem'>Address: 1427 Massachusetts Ave, Arlington, MA 02476</li>
+                <li class='listItem'>Phone: (781) 646-9138</li>
+                <li class='listItem'>Store Hours: 9:00 AM - 7:00 PM</li>
+                <li class='listItem'>Senior Shopping Hours: 8:00 AM - 9:00 AM</li>
+            </ul>
+        </li>
+        <li class='locationName'>Trader Joes (Burlington)
+            <ul>
+                <li class='listItem'>Address: 51 Middlesex Turnpike, Burlington, MA 01803</li>
+                <li class='listItem'>Phone: (781) 273-2310</li>
+                <li class='listItem'>Store Hours: 10:00 AM - 7:00 PM</li>
+                <li class='listItem'>Senior Shopping Hours: 9:00 AM - 10:00 AM</li>
+            </ul>
+        </li>
+        <li class='locationName'>Wegmans
+            <ul>
+                <li class='listItem'>Address: 53 Third Avenue Burlington, Massachusetts 01803</li>
+                <li class='listItem'>Phone: (781) 418-0700</li>
+                <li class='listItem'>Store Hours: 7:00 AM - 9:00 PM</li>
+            </ul>
+        </li>
+        <li class='locationName'>Costco Wholesale
+            <ul>
+                <li class='listItem'>Address: 71 2ND AVE Waltham, MA 02451</li>
+                <li class='listItem'>Phone: (781) 622-3883</li>
+                <li class='listItem'>Store Hours:&nbsp;
+                    <ul>
+                        <li>M-F 10:00 AM - 6:30 PM</li>
+                        <li>Sat. 9:30 AM -6:00 PM</li>
+                        <li>Sun. 10:00 AM - 6:00 PM</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </div>
+
+
+
+
+    <h3 class='donateTitle'>Donate:</h3>
+    <p class='donate'>If you'd like to help fund research to stop this epidemic, click here:</p>
+    <a class='donateLink' href='https://covid19responsefund.org/'>World Health Organization</a>
+
+    <p class='credits'>All data comes from New York Times, all graphs made using Chart.js</p>
+
+
+    <!--change up the width and height variables later-->
+
+    <script>
+        //these are url variables
+        const website = "https://api.quarantine.country/api/v1/summary/latest";
+        const countyUrl = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv";
+        const stateUrl = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv";
+        const countyPopUrl = "https://raw.githubusercontent.com/GiancarloZaniolo/GiancarloZaniolo.github.io/master/covid-19/counties.txt";
+
+        const url = website;
+        //change this later if you need a more complicated url
+
+        //input field variables
+        const stateInputField = document.querySelector('#stateInput');
+        const countyInputField = document.querySelector('#countyInput');
+        const submit = document.querySelector('#submit');
+        const responseField = document.querySelector('#responseField');
+        const pieResponseField = document.querySelector('#pieResponseField');
+
+        //line graph variables
+        let isFirstChart = true;
+        let chart;
+        let ratioChart;
+
+        //population variables
+        const arrayOfStates = loadInStates();
+        //fetchCountyData(countyPopUrl);
+        countiesArray = [];
+
+        responseField.innerHTML = '<p class="startup">Enter a State or State and County to begin!</p>';
+
+        submit.addEventListener("click", submitButtonClicked);
+
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        function submitButtonClicked(event) {
+            event.preventDefault();
+            while (responseField.firstChild) {
+                responseField.removeChild(responseField.firstChild);
+            }
+            while (pieResponseField.firstChild) {
+                pieResponseField.removeChild(pieResponseField.firstChild);
+            }
+            //check what other formatting I have to do to facilitate functionality
+            //FIX LATER
+            //const countyName = countyInputField.value.toLowerCase();
+            //const stateName = stateInputField.value.toLowerCase();
+            const countyName = countyInputField.value;
+            const stateName = stateInputField.value;
+
+            fetchCountyData(countyName, stateName);
+
+        }
+
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        async function fetchCountyData(countyName, stateName) {
+            if (countyName === "") {
+                try {
+                    const stateResponse = await fetch(stateUrl);
+                    const responseCSV = await stateResponse.text();
+                    console.log("Checkpoint 1 " + stateName);
+                    let tempDataArray = responseCSV.split('\n').slice(1);
+                    let hasValues = false;
+
+                    let dataArray = {
+                        dates: [],
+                        cases: [],
+                        deaths: []
+                    };
+                    for (let i = 0; i < tempDataArray.length; i++) {
+                        let arr = tempDataArray[i].split(',');
+                        if (arr[1] === stateName) {
+                            hasValues = true;
+                            dataArray.dates.push(arr[0]);
+                            dataArray.cases.push(arr[3]);
+                            dataArray.deaths.push(arr[4]);
+                        }
+
+                    }
+
+                    for (let i = 0; i < arrayOfStates.length; i++) {
+                        if (stateName === arrayOfStates[i].name) {
+                            pop = arrayOfStates[i].population;
+                        }
+                    }
+                    //render and print out all data
+                    //renderData(stateName, dataArray);
+
+                    if (hasValues === true) {
+                        sampleChartCode(dataArray);
+                        deathRatioChartCode(dataArray);
+                        isFirstChart = false;
+                        renderPieData(stateName, dataArray, pop);
+                    }
+                    else {
+                        //make "invaid input error"
+                        responseField.innerHTML = '<p class="error">Input not recognized</p>';
+                    }
+                }
+                catch (error) {
+                    console.log(error);
+                }
+            }
+            else {
+                try {
+                    const countyResponse = await fetch(countyUrl);
+                    const responseCSV = await countyResponse.text();
+                    const countyPopData = await fetchCountyPopData(countyPopUrl);
+                    //logCountiesArray(countyPopData);
+                    //console.log("Checkpoint 1 " + stateName + " " + countyName);
+                    let tempDataArray = responseCSV.split('\n').slice(1);
+                    let hasValues = false;
+
+                    let dataArray = {
+                        dates: [],
+                        cases: [],
+                        deaths: []
+                    };
+                    for (let i = 0; i < tempDataArray.length; i++) {
+                        let arr = tempDataArray[i].split(',');
+                        if (arr[1] === countyName && arr[2] === stateName) {
+                            hasValues = true;
+                            dataArray.dates.push(arr[0]);
+                            dataArray.cases.push(arr[4]);
+                            dataArray.deaths.push(arr[5]);
+                        }
+                    }
+
+                    for (let i = 0; i < countyPopData.length; i++) {
+                        if (stateName === countyPopData[i].state) {
+                            for (let j = 0; j < countyPopData[i].counties.length; j++) {
+                                if (countyName === countyPopData[i].counties[j].name) {
+                                    pop = countyPopData[i].counties[j].population;
+                                }
+                            }
+                        }
+                    }
+                    //console.log(stateName);
+
+                    //render all data
+                    //renderData(countyName, dataArray);
+                    if (hasValues === true) {
+                        sampleChartCode(dataArray);
+                        deathRatioChartCode(dataArray);
+                        isFirstChart = false;
+                        renderPieData(countyName, dataArray, pop);
+                    }
+                    else {
+                        //make "invaid input error"
+                        responseField.innerHTML = '<p>Input not recognized</p>';
+                    }
+
+
+                }
+                catch (error) {
+                    console.log(error);
+                }
+            }
+
+            console.log("at the end");
+        }
+        //
+        //
+        //
+        //
+        //
+        //
+
+        function renderData(subjectName, dataArray) {
+            let toBeRendered = [];
+            for (let i = 0; i < dataArray.dates.length; i++) {
+
+                toBeRendered.push(`Date: ${dataArray.dates[i]} 
+                        Cases: ${dataArray.cases[i]} 
+                        Deaths: ${dataArray.deaths[i]}</br>`)
+                responseField.innerHTML = `<p>Here are ${subjectName}s properties: </p><ul>${toBeRendered}</ul>`;
+            }
+        }
+
+        function renderPieData(subjectName, dataArray, population) {
+            //            Florida:
+            //__% has been infected  __% has died
+            pieResponseField.innerHTML = "<h2 class='pieName'>" + subjectName + ":</h2>" + "<p class='data'>" +
+                ((dataArray.cases[dataArray.cases.length - 1] / population) * 100).toFixed(4) + "% infected</p>" +
+                "<p class='data'>" + ((dataArray.deaths[dataArray.deaths.length - 1] / population) * 100).toFixed(4) +
+                "% dead</p>"
+        }
+
+        function fixDates(dataArray) {
+            for (let i = 0; i < dataArray.dates.length; i++) {
+                let arr = dataArray.dates[i].split('-');
+                dataArray.dates[i] = arr[1] + '/' + arr[2] + '/' + arr[0];
+            }
+            return dataArray;
+        }
+
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+
+        function sampleChartCode(dataArray) {
+            let casesArray = [];
+
+            for (let i = 0; i < dataArray.dates.length; i++) {
+                casesArray.push({
+                    x: new Date(dataArray.dates[i]),
+                    y: dataArray.cases[i]
+                })
+            }
+            let deathsArray = [];
+            for (let i = 0; i < dataArray.dates.length; i++) {
+                deathsArray.push({
+                    x: new Date(dataArray.dates[i]),
+                    y: dataArray.deaths[i]
+                })
+            }
+            const xLabels = dataArray.dates;
+
+            if (isFirstChart === true) {
+                var ctx = document.getElementById('firstChart').getContext('2d');
+                chart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: xLabels,
+                        datasets: [{
+                            label: 'Cases',
+                            data: casesArray,
+                            fill: false,
+                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            borderWidth: 1
+                        }, {
+                            label: 'Deaths',
+                            data: deathsArray,
+                            fill: false,
+                            backgroundColor: 'rgba(100, 99, 132, 0.2)',
+                            borderColor: 'rgba(100, 99, 132, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        layout: {
+                            padding: {
+                                left: 20,
+                                right: 20,
+                                top: 20,
+                                bottom: 20
+                            }
+                        },
+                        legend: {
+                            display: true,
+                            labels: {
+                                fontColor: '#0a0a0a'
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Total Cases and Deaths over Time',
+                            fontSize: 20,
+                            fontColor: '#0a0a0a'
+                        },
+                        scales: {
+                            xAxes: [{
+                                type: 'time',
+                                time: {
+                                    unit: 'day'
+                                }
+                            }],
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                });
+            }
+            else {
+                chart.data.datasets[0].data = casesArray;
+                chart.data.datasets[1].data = deathsArray;
+                chart.update();
+            }
+
+
+            //this is the only way I could figure out how to 
+            //resize the chart
+            chart.canvas.parentNode.style.height = '400px';
+            chart.canvas.parentNode.style.width = '700px';
+        }
+
+        //
+        //
+        //   |
+        //   |
+        //
+        //
+        //
+        //
+        function deathRatioChartCode(dataArray) {
+            let ratioArray = [];
+
+            for (let i = 0; i < dataArray.dates.length; i++) {
+                ratioArray.push({
+                    x: new Date(dataArray.dates[i]),
+                    y: dataArray.deaths[i] / dataArray.cases[i]
+                })
+            }
+            const xLabels = dataArray.dates;
+
+            if (isFirstChart === true) {
+                var ctx = document.getElementById('deathRatioChart').getContext('2d');
+                ratioChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: xLabels,
+                        datasets: [{
+                            label: 'Deaths per Case',
+                            data: ratioArray,
+                            fill: false,
+                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        legend: {
+                            display: false,
+                            labels: {
+                                fontColor: '#0a0a0a'
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Deaths per Case over Time',
+                            fontSize: 20,
+                            fontColor: '#0a0a0a'
+                        },
+                        scales: {
+                            xAxes: [{
+                                type: 'time',
+                                time: {
+                                    unit: 'day'
+                                }
+                            }],
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                });
+                isFirstChart = false;
+            }
+            else {
+                ratioChart.data.datasets[0].data = ratioArray;
+                ratioChart.update();
+            }
+
+
+            //this is the only way I could figure out how to 
+            //resize the chart
+            chart.canvas.parentNode.style.height = '400px';
+            chart.canvas.parentNode.style.width = '700px';
+        }
+
+
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        function loadInStates() {
+            let arrayOfStates = [];
+            arrayOfStates.push({
+                name: "California",
+                population: 39512223
+            });
+            arrayOfStates.push({
+                name: "Texas",
+                population: 28995881
+            });
+            arrayOfStates.push({
+                name: "Florida",
+                population: 21477737
+            });
+            arrayOfStates.push({
+                name: "New York",
+                population: 19453561
+            });
+            arrayOfStates.push({
+                name: "Pennsylvania",
+                population: 12801989
+            });
+            arrayOfStates.push({
+                name: "Illinois",
+                population: 12671821
+            });
+            arrayOfStates.push({
+                name: "Ohio",
+                population: 11689100
+            });
+            arrayOfStates.push({
+                name: "Georgia",
+                population: 10617423
+            });
+            arrayOfStates.push({
+                name: "North Carolina",
+                population: 10488084
+            });
+            arrayOfStates.push({
+                name: "Michigan",
+                population: 9986857
+            });
+            arrayOfStates.push({
+                name: "New Jersey",
+                population: 8882190
+            });
+            arrayOfStates.push({
+                name: "Virginia",
+                population: 8535519
+            });
+            arrayOfStates.push({
+                name: "Washington",
+                population: 7614893
+            });
+            arrayOfStates.push({
+                name: "Arizona",
+                population: 7278717
+            });
+            arrayOfStates.push({
+                name: "Massachusetts",
+                population: 6949503
+            });
+            arrayOfStates.push({
+                name: "Tennessee",
+                population: 6833174
+            });
+            arrayOfStates.push({
+                name: "Indiana",
+                population: 6732219
+            });
+            arrayOfStates.push({
+                name: "Missouri",
+                population: 6137428
+            });
+            arrayOfStates.push({
+                name: "Maryland",
+                population: 6045680
+            });
+            arrayOfStates.push({
+                name: "Wisconsin",
+                population: 5822434
+            });
+            arrayOfStates.push({
+                name: "Colorado",
+                population: 5758736
+            });
+            arrayOfStates.push({
+                name: "Minnesota",
+                population: 5639632
+            });
+            arrayOfStates.push({
+                name: "South Carolina",
+                population: 5148714
+            });
+            arrayOfStates.push({
+                name: "Alabama",
+                population: 4903185
+            });
+            arrayOfStates.push({
+                name: "Louisiana",
+                population: 4648794
+            });
+            arrayOfStates.push({
+                name: "Kentucky",
+                population: 4467673
+            });
+            arrayOfStates.push({
+                name: "Oregon",
+                population: 4217737
+            });
+            arrayOfStates.push({
+                name: "Oklahoma",
+                population: 3956971
+            });
+            arrayOfStates.push({
+                name: "Connecticut",
+                population: 3565287
+            });
+            arrayOfStates.push({
+                name: "Utah",
+                population: 3205958
+            });
+            arrayOfStates.push({
+                name: "Puerto Rico",
+                population: 3193694
+            });
+            arrayOfStates.push({
+                name: "Iowa",
+                population: 3155070
+            });
+            arrayOfStates.push({
+                name: "Nevada",
+                population: 3080156
+            });
+            arrayOfStates.push({
+                name: "Arkansas",
+                population: 3017825
+            });
+            arrayOfStates.push({
+                name: "Mississippi",
+                population: 2976149
+            });
+            arrayOfStates.push({
+                name: "Kansas",
+                population: 2913314
+            });
+            arrayOfStates.push({
+                name: "New Mexico",
+                population: 2096829
+            });
+            arrayOfStates.push({
+                name: "Nebraska",
+                population: 1934408
+            });
+            arrayOfStates.push({
+                name: "West Virginia",
+                population: 1792147
+            });
+            arrayOfStates.push({
+                name: "Idaho",
+                population: 1787065
+            });
+            arrayOfStates.push({
+                name: "Hawaii",
+                population: 1415872
+            });
+            arrayOfStates.push({
+                name: "New Hampshire",
+                population: 1359711
+            });
+            arrayOfStates.push({
+                name: "Maine",
+                population: 1344212
+            });
+            arrayOfStates.push({
+                name: "Montana",
+                population: 1068778
+            });
+            arrayOfStates.push({
+                name: "Rhode Island",
+                population: 1059361
+            });
+            arrayOfStates.push({
+                name: "Delaware",
+                population: 973764
+            })
+            arrayOfStates.push({
+                name: "South Dakota",
+                population: 884659
+            });
+            arrayOfStates.push({
+                name: "North Dakota",
+                population: 762062
+            });
+            arrayOfStates.push({
+                name: "Alaska",
+                population: 731545
+            });
+            arrayOfStates.push({
+                name: "District of Columbia",
+                population: 705749
+            });
+            arrayOfStates.push({
+                name: "Vermont",
+                population: 623989
+            });
+            arrayOfStates.push({
+                name: "Wyoming",
+                population: 578759
+            });
+            arrayOfStates.push({
+                name: "Guam",
+                population: 165718
+            });
+            arrayOfStates.push({
+                name: "U.S. Virgin Islands",
+                population: 104914
+            });
+            arrayOfStates.push({
+                name: "American Samoa",
+                population: 55641
+            });
+            arrayOfStates.push({
+                name: "Northern Mariana Islands",
+                population: 55194
+            });
+            return arrayOfStates;
+        }
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        async function fetchCountyPopData(countyPopUrl) {
+            const rawResponse = await fetch(countyPopUrl);
+            const countiestxt = await rawResponse.text();
+            let tempDataArray = countiestxt.split('\n');
+
+            for (let i = 0; i < tempDataArray.length - 1; i++) {
+                let isState = false;
+                let a = tempDataArray[i].split('\t', 3);
+                for (let k = 0; k < arrayOfStates.length; k++) {
+                    if (a[1] === " " + arrayOfStates[k].name) {
+                        isState = true;
+                        let pop = removeCommasFromNumber(a[2]);
+                        let countyName = a[0].trim();
+                        if (countyName.indexOf(",") != -1) {
+                            countyName = removeExtraCountyData(countyName);
+                        }
+                        countiesArray.push({
+                            state: a[1].trim(),
+                            counties: [{
+                                name: countyName,
+                                population: parseInt(pop)
+                            }]
+                        })
+                    }
+                }
+                if (isState === false) {
+                    let pop = removeCommasFromNumber(a[1]);
+                    let countyName = a[0].trim();
+                    if (countyName.indexOf(",") != -1) {
+                        countyName = removeExtraCountyData(countyName);
+                    }
+                    countiesArray[countiesArray.length - 1].counties.push({
+                        name: countyName,
+                        population: parseInt(pop)
+                    })
+                }
+                //logCountiesArray(countiesArray);
+
+            }
+            return countiesArray;
+        }
+
+        function logCountiesArray(countiesArray) {
+            for (let i = 0; i < countiesArray.length; i++) {
+                console.log(countiesArray[i].state);
+                for (let j = 0; j < countiesArray[i].counties.length; j++) {
+                    console.log(countiesArray[i].counties[j].name + " " + countiesArray[i].counties[j].population);
+                }
+            }
+        }
+
+        function removeCommasFromNumber(num) {
+            while (num.indexOf(",") != -1) {
+                num = num.substring(0, num.indexOf(",")) + num.substring((num.indexOf(",") + 1), num.length);
+            }
+            return num;
+        }
+
+        function removeExtraCountyData(county) {
+            return county.substring(0, county.indexOf(","));
+        }
+
+
+    </script>
+</body>
+
+
+</html>
