@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- this is what shows up in the browser tab-->
+    <title>Annazon.com</title>
+
+    <!--this links to the css file-->
+    <link rel="stylesheet" type="text/css" href="https://GiancarloZaniolo.github.io/Resources/Annazon_files/style.css">
+</head>
+
+<body>
+    <main>
+        <img src="https://GiancarloZaniolo.github.io/Resources/Annazon_files/Untitled drawing (4)-page-001.jpg"
+            class="logo">
+        <img src="https://GiancarloZaniolo.github.io/Resources/Annazon_files/ezgif.com-gif-maker.gif" class="arrows">
+
+        <div id="responseField">
+
+        </div>
+    </main>
+
+
+    <script>
+
+        const linksUrl = "https://GiancarloZaniolo.github.io/Resources/Annazon_files/links.txt";
+
+        let button;
+        getLinks();
+
+
+
+
+        async function getLinks() {
+            const linksResponse = await fetch(linksUrl);
+            const linksTxt = await linksResponse.text();
+
+            const linksArray = linksTxt.split('\n');
+            generateButton(linksArray[Math.floor(Math.random() * linksArray.length)]);
+            button = document.querySelector('#button');
+            button.addEventListener("click", buttonClicked);
+        }
+
+        function generateButton(link) {
+            while (responseField.firstChild) {
+                responseField.removeChild(responseField.firstChild);
+            }
+
+            responseField.innerHTML = `<div class = "buttonFrame"><a href = "${link}" id = "button" target="_blank">What kinds of things\ndoes Anna like\nto buy on Amazon?</a></div>`;
+
+        }
+
+        function buttonClicked(event) {
+            getLinks();
+        }
+
+    </script>
+
+</body>
+
+</html>
