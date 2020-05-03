@@ -6,7 +6,7 @@
     <title>Annazon.com</title>
 
     <!--this links to the css file-->
-    <link rel="stylesheet" type="text/css" href="https://GiancarloZaniolo.github.io/Resources/Annazon_files/style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
@@ -46,7 +46,7 @@
                 responseField.removeChild(responseField.firstChild);
             }
 
-            responseField.innerHTML = `<div class = "buttonFrame"><a href = "${link}" id = "button" target="_blank">What kinds of things\ndoes Anna like\nto buy on Amazon?</a></div>`;
+            responseField.innerHTML = `<div class = "buttonFrame" id = "button"><a href = "${link}" target="_blank">What kinds of things\ndoes Anna like\nto buy on Amazon?</a></div>`;
 
         }
 
