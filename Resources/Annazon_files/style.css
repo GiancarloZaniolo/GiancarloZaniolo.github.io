@@ -1,0 +1,33 @@
+.logo{
+    max-height: 250px;
+    width: auto;
+}
+
+.arrows{
+    max-height: 250px;
+    width: auto;
+}
+
+#button{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.buttonFrame{
+    background-color:#ff0040;
+    padding: 25px;
+    border-radius: 25px; 
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1000;
+    grid-template-rows: 250px 250px 250px;
+    grid-row-gap: 0px;
+    grid-column-gap: 0px;
+    justify-items: center;
+    justify-content: center;
+    align-items: stretch;
+    align-content: start;
+}
