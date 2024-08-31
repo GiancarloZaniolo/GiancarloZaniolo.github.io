@@ -1,10 +1,10 @@
 body{
-  background-color: #d5ffff;
+  background-color: #242423;
   font-family: "arial";
 }
 
 .line{
-  border-top: 2px solid #2b2b2b;
+  border-top: 2px solid #cccccc;
   padding: 0px 300px 0px 0px; 
   margin: 20px 0px 40px 10px
 }
@@ -12,7 +12,7 @@ body{
 .project-header h1{
   font-size: 40px;
   font-weight: 700;
-  color: Black;
+  color: white;
   /*gives margins clockwise rotation*/
   margin: 50px 30px 50px 30px;
 }
@@ -26,7 +26,7 @@ body{
 .project-header h4{
   font-size: 18px;
   font-weight: 500;
-  color: Black;
+  color: white;
   /*gives margins clockwise rotation*/
   margin: 50px 30px 20px 30px;
 }
@@ -34,14 +34,14 @@ body{
 .bikeExperiments h4{
   font-size: 18px;
   font-weight: 700;
-  color: Black;
+  color: white;
   /*gives margins clockwise rotation*/
   margin: 50px 30px 30px 30px;
 }
 
 .bikeExperiments a{
   font-weight: 400;
-  color: #4f4f4f;
+  color: #cccccc;
   text-decoration: underline;
 }
 
@@ -60,14 +60,14 @@ body{
 .bikeExperiments p{
   font-size: 16px;
   font-weight: 400;
-  color: black;
+  color: white;
   margin: 20px 30px 30px 30px;
 }
 
 .main-page{
   font-size: 16px;
   font-weight: 400;
-  color: #4f4f4f;
+  color: #cccccc;
   text-decoration: underline;
   margin: 60px 0px 0px 50px;
 }

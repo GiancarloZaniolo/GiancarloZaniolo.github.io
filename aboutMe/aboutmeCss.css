@@ -1,12 +1,12 @@
 body{
-  background-color: #d5ffff;
+  background-color: #242423;
   font-family: "arial";
 }
 
 h1{
   font-size: 40px;
   font-weight: 700;
-  color: Black;
+  color: White;
   /*gives margins clockwise rotation*/
   margin: 50px 30px 50px 30px;
 }
@@ -14,7 +14,7 @@ h1{
 h2{
   font-size: 24px;
   font-weight: 600;
-  color: Black;
+  color: white;
   /*gives margins clockwise rotation*/
   margin: 50px 30px 20px 30px;
 }
@@ -22,7 +22,7 @@ h2{
 a{
   font-size: 16px;
   font-weight: 400;
-  color: #4f4f4f;
+  color: #cccccc;
   text-decoration: underline;
   margin: 20px 30px 20px 30px;
 }
@@ -30,6 +30,6 @@ a{
 p{
   font-size: 16px;
   font-weight: 400;
-  color: black;
+  color: white;
   margin: 20px 30px 30px 30px;
 }
