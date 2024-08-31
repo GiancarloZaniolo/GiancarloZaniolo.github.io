@@ -23,13 +23,10 @@
 
     <script>
 
-        const linksUrl = "annazon/resources/links.txt";
+        const linksUrl = "https://giancarlozaniolo.github.io/annazon/resources/links.txt";
 
         let button;
         getLinks();
-
-
-
 
         async function getLinks() {
             const linksResponse = await fetch(linksUrl);
